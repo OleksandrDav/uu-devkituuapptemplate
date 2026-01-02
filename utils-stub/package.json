@@ -1,0 +1,23 @@
+{
+  "name": "utils-stub",
+  "version": "1.0.0",
+  "main": "authentication-helper.js",
+  "spec": "nodejs-uuscriptlib; uu_appg01@1.12.3",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "uu-safe-install": "npx uu-safe-install"
+  },
+  "dependencies": {
+    "open": "^8.4.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "uu_appg01_devkit": "^6.6.0",
+    "uu_script_devkitg01": "^1.12.3"
+  },
+  "prettier": {
+    "printWidth": 120
+  }
+}

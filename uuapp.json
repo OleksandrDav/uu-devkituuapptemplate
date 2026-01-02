@@ -1,0 +1,80 @@
+{
+  "product": "uu_devkituuapptemplate_maing01",
+  "version": "0.3.0-DEV",
+  "description": {
+    "en": "",
+    "cs": ""
+  },
+  "flsUri": "https://uuapp.plus4u.net/uu-flsg01-main/14facd344c884515a4a6061c5e467301",
+  "slsUri": "https://uuapp.plus4u.net/uu-sls-maing01/f34e4c65a9c84ea0baf50017c43fc97d",
+  "docUri": "https://uuapp.plus4u.net/uu-bookkit-maing01/9aa68648f3814e3a9dd20ba69adcdab0/",
+  "imageUri": "https://uuapp.plus4u.net/uu-bookkit-maing01/78462435-e884539c8511447a977c7ff070e7f2cf/getProductLogo",
+  "devkit": {
+    "development": {
+      "scriptRepositoryBaseUri": "----- VALUE REQUIRED -----",
+      "uuAppBoxRegistryBaseUri": "https://uuapp.plus4u.net/uu-cloud-appboxregistryg01/ae03424ac63a4e068f390db5b58bbcdd",
+      "uuCloudUniverseBaseUri": "https://uuapp.plus4u.net/uu-cloud-universeg01/499b255d2620f209353489fad4ccceb4",
+      "uuCloudLogStoreBaseUri": "https://uuapp.plus4u.net/uu-cloudlogstore-maing02/203a4bb4c0c5484690533e658a1c8c9e",
+      "uuCloudWorkloadHubBaseUri": "----- VALUE REQUIRED -----"
+    }
+  },
+  "vendor": {
+    "productPortalUri": null,
+    "licenseAgreementUri": null,
+    "relatedProductUriList": [],
+    "organizationName": null,
+    "organizationOid": null,
+    "leadingAuthorList": [],
+    "otherAuthorList": [],
+    "usedTechnologies": {
+      "technologyList": [],
+      "otherTechnologyList": []
+    }
+  },
+  "uu_devkituuapptemplate_maing01-hi": {},
+  "uu_devkituuapptemplate_maing01-server": {
+    "devkit": {
+      "development": {
+        "uuAppBoxUri": "",
+        "uuSubAppInstanceWorkloadOid": "68d9ff744b53e4c2eb8672b2",
+        "uuCloudWorkloadHubBaseUri": "----- VALUE REQUIRED -----"
+      }
+    }
+  },
+  "uu_devkituuapptemplate_maing01-uuscriptlib": {
+    "scriptList": [
+      {
+        "code": "uu_devkituuapptemplate_maing01/uu_devkituuapptemplate_maing01/clear",
+        "srcPath": "uu_devkituuapptemplate_maing01/clear.js"
+      },
+      {
+        "code": "uu_devkituuapptemplate_maing01/uu_devkituuapptemplate_maing01/init-rollback",
+        "srcPath": "uu_devkituuapptemplate_maing01/init-rollback.js"
+      },
+      {
+        "code": "uu_devkituuapptemplate_maing01/uu_devkituuapptemplate_maing01/init",
+        "srcPath": "uu_devkituuapptemplate_maing01/init.js"
+      },
+      {
+        "code": "uu_devkituuapptemplate_maing01/uu_devkituuapptemplate_maing01/set-state-closed",
+        "srcPath": "uu_devkituuapptemplate_maing01/set-state-closed.js"
+      },
+      {
+        "code": "uu_devkituuapptemplate_maing01/uu_devkituuapptemplate_maing01-client",
+        "srcPath": "uu_devkituuapptemplate_maing01-client.js"
+      },
+      {
+        "code": "uu_devkituuapptemplate_maing01-uuscriptlib/hello-world",
+        "srcPath": "hello-world.js"
+      }
+    ]
+  },
+  "license": "License Commercial",
+  "uuAppDevKitg02": {
+    "production": {
+      "uu_app_devkitg02-uudck-core-uucli.uuAppDevKitEngineBaseUri": null,
+      "uu_app_devkitg02-uudck-core-uucli.uuScriptRepositoryBaseUri": "https://uuapp.plus4u.net/uu-script-repositoryg02/1f192881d218462ca51672456745de22",
+      "uu_app_devkitg02-uudck-core-uucli.plus4uGoBaseUri": "https://uuapp.plus4u.net/uu-plus4ugo-maing01/f34b62a867db4bd89490534bb26451ad"
+    }
+  }
+}

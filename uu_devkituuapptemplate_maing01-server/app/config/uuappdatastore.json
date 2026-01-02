@@ -1,0 +1,41 @@
+{
+  "dataStoreMap": {
+    "devKitUuAppTemplateMainObjectStore": {
+      "dataStoreInstance": "primary",
+      "objectTypeMap": {
+        "uuDevKitUuAppTemplate": {
+          "options": {
+            "maxNoi": 1
+          }
+        },
+        "historizableObject": {
+          "options": {
+            "maxNoi": 1000000
+          }
+        }
+      }
+    }
+  },
+  "dataStoreDaoRealizationMap": {
+    "devKitUuAppTemplateMainObjectStore": {
+      "devKitUuAppTemplateMainAsidMongoDao": {
+        "uuObjectType": "uuDevKitUuAppTemplate",
+        "dataSourceType": "mongodb",
+        "daoType": "asid",
+        "realization": "dao/DevKitUuAppTemplateMainAsidMongoDao"
+      },
+      "devKitUuAppTemplateMainAwidMongoDao": {
+        "uuObjectType": "uuDevKitUuAppTemplate",
+        "dataSourceType": "mongodb",
+        "daoType": "awid",
+        "realization": "dao/DevKitUuAppTemplateMainAwidMongoDao"
+      },     
+      "historizableObjectAwidMongoDao": {
+        "uuObjectType": "historizableObject",
+        "dataSourceType": "mongodb",
+        "daoType": "awid",
+        "realization": "dao/HistorizableObjectAwidMongoDao"
+      }
+    }
+  }
+}

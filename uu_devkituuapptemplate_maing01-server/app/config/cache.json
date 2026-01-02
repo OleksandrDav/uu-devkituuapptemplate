@@ -1,0 +1,13 @@
+{
+  "caches": {
+    "uu-devkituuapptemplate-maing01/configuration": {
+      "cacheManager": "uu_app_cache/basic-memory-cache-manager",
+      "policy": "lru",
+      "config": {
+        "maxItemCount": 100,
+        "maxSoi": 10000,
+        "ttl": 600000
+      }
+    }
+  }
+}

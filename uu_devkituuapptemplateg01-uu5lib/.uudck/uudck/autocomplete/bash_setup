@@ -1,0 +1,1 @@
+UUDCK_AC_BASH_COMPFUNC_PATH=D:\uu_devkituuapptemplate_maing01\uu_devkituuapptemplateg01\.uudck\uudck\autocomplete\functions\bash\uudck.bash && test -f $UUDCK_AC_BASH_COMPFUNC_PATH && source $UUDCK_AC_BASH_COMPFUNC_PATH;

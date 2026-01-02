@@ -1,0 +1,29 @@
+{
+  "uuIdentity": "642-1-1",
+  "uuBusinessTerritoryBaseUri": "https://uuapp-dev.plus4u.net/uu-businessterritory-maing01/4e5216281280ae813766cab16d528fd0",
+  "uuApp": {
+    "innerPort": "8080",
+    "vendor": "uu",
+    "uuApp": "devKitUuAppTemplate",
+    "uuSubApp": "main",
+    "generation": "g01",
+    "host": "https://uuapp-dev.plus4u.net"
+  },
+  "source": {
+    "baseUri": "https://uuapp.plus4u.net/uu-managementkit-maing02/f91215cbb1c3f25893e3c949215a152f",
+    "appType": "document",
+    "oid": "6927dca7bb2327b78b8332f9",
+    "fileOid": "692eca0d83128b858eff584c"
+  },
+  "asid": "asid",
+  "awidList": [
+    {
+      "awid": "awid",
+      "uuTerritoryBaseUri": "https://uuapp-dev.plus4u.net/uu-businessterritory-maing01/4e5216281280ae813766cab16d528fd0",
+      "locationId": "locationId",
+      "name": "uuDevKitUuAppTemplate AWID",
+      "desc": "uuDevKitUuAppTemplate AWID description"
+    }
+  ],
+  "dockerEnvPath": "D:\\local-territory\\uu_dockerenvg01"
+}

@@ -1,0 +1,46 @@
+{
+  "name": "uu_devkituuapptemplateg01",
+  "version": "0.1.0-DEV.0",
+  "description": "",
+  "license": "License Commercial",
+  "spec": "uu5-lib; uu_appg01_devkit@6.8.1; uu5devkitg01-plugin@1.7.2",
+  "dependencies": {
+    "uu5g05": "^1.30.3",
+    "uu5g05-elements": "^1.30.3",
+    "uu_artifactg01": "~0.2.0-beta",
+    "uu5componentkitg01": "~0.3.0-beta"
+  },
+  "uuBuildSettings": {
+    "externals": {}
+  },
+  "devDependencies": {
+    "uu_appg01_devkit": "^6.8.1",
+    "uu5devkitg01-plugin": "^1.7.2",
+    "uu5g05-test": "^1.30.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "clean": "uu_appg01_devkit clean",
+    "test": "uu_appg01_devkit test",
+    "build": "uu_appg01_devkit build",
+    "package": "uu_appg01_devkit package",
+    "start": "uu_appg01_devkit start",
+    "prettify": "uu_appg01_devkit prettify",
+    "vulnerabilityScan": "uu_appg01_devkit vulnerabilityScan",
+    "uuAppDevKitUpgrade": "uu_appg01_devkit uuAppDevKitUpgrade",
+    "uu5Generate": "uu5devkitg01-plugin generate",
+    "uu5LsiExport": "uu5devkitg01-plugin lsiExport",
+    "uu5LsiImport": "uu5devkitg01-plugin lsiImport",
+    "uu5DocUpdateExamples": "uu5devkitg01-plugin docUpdateExamples"
+  },
+  "main": "src/index.js",
+  "files": [
+    "dist",
+    "dist-node"
+  ],
+  "prettier": {
+    "printWidth": 120
+  }
+}

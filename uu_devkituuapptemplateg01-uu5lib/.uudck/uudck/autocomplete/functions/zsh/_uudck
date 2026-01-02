@@ -1,0 +1,152 @@
+#compdef uudck
+compdef uuappdevkitg02=uudck
+compdef uudck=uudck
+
+_uudck_uu5lib() {
+  local context state state_descr line
+  typeset -A opt_args
+
+  _arguments -C "1: :->cmds" "*::arg:->args"
+
+  case "$state" in
+    cmds)
+_values "completions" \
+"init[Generate structure of Uu5Library project]" \
+
+      ;;
+    args)
+      case $line[1] in
+        "init")
+          _arguments -S \
+--json"[Output in JSON format instead of a human-readable format.]" \
+"(-e --environment)"{-e,--environment}"[Select specific environment settings from the config.]:file:_files" \
+--workDir"[Target directory for storing script execution results.]:file:_files" \
+--logLevel"[Specify the logging output level.]:logLevel options:(debug warn error info trace)" \
+--verbose"[Enable detailed logging output.]" \
+"(-h --help)"{-h,--help}"[Show help for the command]" \
+--localExecution"[Toggle between local and remote execution.]" \
+--uuConsoleBaseUri"[Console application used for logging and monitoring.]:file:_files" \
+--consoleCode"[Console component used for logging and monitoring]:file:_files" \
+--progressCode"[Progress component used for tracking task execution]:file:_files" \
+--uuCodebaseRepositoryUri"[Repository location in the Codebase application.]:file:_files" \
+--targetBranch"[Branch where changes will be committed.]:file:_files" \
+--parentBranch"[Parent branch for the new feature branch.]:file:_files" \
+--sshPrivateKeyUri"[SSH key for secure repository access.]:file:_files" \
+--name"[Name of the uu5library.]:file:_files" \
+--templateVersion"[Version of the template to use for the uu5Lib.]:file:_files" \
+--help"[Show help for command]" \
+"*: :_files"
+        ;;
+
+      esac
+      ;;
+  esac
+}
+
+_uudck_uuhi() {
+  local context state state_descr line
+  typeset -A opt_args
+
+  _arguments -C "1: :->cmds" "*::arg:->args"
+
+  case "$state" in
+    cmds)
+_values "completions" \
+"init[Generate structure of human interface for your application]" \
+
+      ;;
+    args)
+      case $line[1] in
+        "init")
+          _arguments -S \
+--json"[Output in JSON format instead of a human-readable format.]" \
+"(-e --environment)"{-e,--environment}"[Select specific environment settings from the config.]:file:_files" \
+--workDir"[Target directory for storing script execution results.]:file:_files" \
+--logLevel"[Specify the logging output level.]:logLevel options:(debug warn error info trace)" \
+--verbose"[Enable detailed logging output.]" \
+"(-h --help)"{-h,--help}"[Show help for the command]" \
+--localExecution"[Toggle between local and remote execution.]" \
+--uuConsoleBaseUri"[Console application used for logging and monitoring.]:file:_files" \
+--consoleCode"[Console component used for logging and monitoring]:file:_files" \
+--progressCode"[Progress component used for tracking task execution]:file:_files" \
+--uuCodebaseRepositoryUri"[Repository location in the Codebase application.]:file:_files" \
+--targetBranch"[Branch where changes will be committed.]:file:_files" \
+--parentBranch"[Parent branch for the new feature branch.]:file:_files" \
+--sshPrivateKeyUri"[SSH key for secure repository access.]:file:_files" \
+--name"[Name of the project.]:file:_files" \
+--mode"[Specify mode. Standard mode creates uuHi for two-phase sys/uuAppWorkspace/init command.]:mode options:(simple standard)" \
+--templateVersion"[Version of the template to use for the uuHi.]:file:_files" \
+--help"[Show help for command]" \
+"*: :_files"
+        ;;
+
+      esac
+      ;;
+  esac
+}
+
+
+_uudck() {
+  local context state state_descr line
+  typeset -A opt_args
+
+  _arguments -C "1: :->cmds" "*::arg:->args"
+
+  case "$state" in
+    cmds)
+      _values "completions" \
+"uu5lib[Manage your uu5 library. You can create new library, create components, deploy and more]" \
+"uuhi[Manage human interface of your application]" \
+"init[Initialize uudck in the current working directory.]" \
+"inspect[Inspect a uuAppDevKitLib.]" \
+"install[Install a uuAppDevKitLib into uudck.]" \
+"help[Display help for uudck.]" \
+"autocomplete[Display autocomplete installation instructions.]" \
+
+    ;;
+    args)
+      case $line[1] in
+uu5lib)
+  _uudck_uu5lib
+  ;;
+uuhi)
+  _uudck_uuhi
+  ;;
+init)
+_arguments -S \
+--uuAppDevKitEngineUri"[URI for uuAppDevKitg02 engine. If not provided, you will be prompted interactively. If not set, you will only be able to run tasks locally on your PC.]:file:_files" \
+--help"[Show help for command]" \
+"*: :_files" ;; 
+inspect)
+_arguments -S \
+--json"[Format output as json.]" \
+"(-h --help)"{-h,--help}"[Show CLI help.]" \
+"(-v --verbose)"{-v,--verbose}"[]" \
+--help"[Show help for command]" \
+"*: :_files" ;; 
+install)
+_arguments -S \
+--json"[Format output as json.]" \
+"(-f --force)"{-f,--force}"[Force npm to fetch remote resources even if a local copy exists on disk.]" \
+"(-h --help)"{-h,--help}"[Show CLI help.]" \
+"(-s --silent)"{-s,--silent}"[Silences npm output.]" \
+"(-v --verbose)"{-v,--verbose}"[Show verbose npm output.]" \
+--help"[Show help for command]" \
+"*: :_files" ;; 
+help)
+_arguments -S \
+"(-n --nested-commands)"{-n,--nested-commands}"[Include all nested commands in the output.]" \
+--help"[Show help for command]" \
+"*: :_files" ;; 
+autocomplete)
+_arguments -S \
+"(-r --refresh-cache)"{-r,--refresh-cache}"[Refresh cache (ignores displaying instructions)]" \
+--help"[Show help for command]" \
+"*: :_files" ;; 
+esac
+
+    ;;
+  esac
+}
+
+_uudck

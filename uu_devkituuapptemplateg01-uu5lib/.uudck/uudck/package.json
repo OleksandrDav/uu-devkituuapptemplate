@@ -1,0 +1,25 @@
+{
+  "name": "uudck",
+  "dependencies": {},
+  "oclif": {
+    "plugins": [
+      {
+        "name": "uu_app_devkitg02-uudck-core-uucli",
+        "root": "D:\\uu_devkituuapptemplate_maing01\\uu_devkituuapptemplateg01-uu5lib\\node_modules\\uu_app_devkitg02-uudck-core-uucli",
+        "type": "link"
+      },
+      {
+        "name": "uu_app_devkitg02-uu5lib-uudck-uucli",
+        "root": "D:\\uu_devkituuapptemplate_maing01\\uu_devkituuapptemplateg01-uu5lib\\node_modules\\uu_app_devkitg02-uu5lib-uudck-uucli",
+        "type": "link"
+      },
+      {
+        "name": "uudck-core",
+        "root": "D:\\uu_devkituuapptemplate_maing01\\uu_devkituuapptemplateg01-uu5lib\\node_modules\\uudck-core",
+        "type": "link"
+      }
+    ],
+    "schema": 1
+  },
+  "private": true
+}

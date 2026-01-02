@@ -1,0 +1,50 @@
+{
+  "product": "uu_devkituuapptemplateg01",
+  "version": "0.1.0-DEV.0",
+  "description": "",
+  "vendor": {
+    "productPortalUri": null,
+    "licenseAgreementUri": null,
+    "relatedProductUriList": [],
+    "organizationName": null,
+    "organizationOid": null,
+    "leadingAuthorList": [],
+    "otherAuthorList": [],
+    "usedTechnologies": {
+      "technologyList": [],
+      "otherTechnologyList": []
+    }
+  },
+  "devkit": {
+    "development": {
+      "uuAppBoxRegistryBaseUri": "----- VALUE REQUIRED -----",
+      "uuCloudUniverseBaseUri": "----- VALUE REQUIRED -----",
+      "uuCloudLogStoreBaseUri": "----- VALUE REQUIRED -----",
+      "uuCloudWorkloadHubBaseUri": "----- VALUE REQUIRED -----",
+      "uu5LibraryRepositoryWorkloadOid": "----- VALUE REQUIRED -----",
+      "uuAppLibraryRegistryBaseUri": "----- VALUE REQUIRED -----"
+    }
+  },
+  "docUri": "",
+  "flsUri": "",
+  "slsUri": "",
+  "imageUri": "",
+  "icon": "",
+  "uu_devkituuapptemplateg01-core": {
+    "namespace": "UuDevKitUuAppTemplateCore",
+    "sourceUri": "https://cdn.plus4u.net/uu-devkituuapptemplateg01/%s/uu_devkituuapptemplateg01-core.min.js",
+    "componentList": []
+  },
+  "uu_devkituuapptemplateg01": {
+    "namespace": "UuDevKitUuAppTemplate",
+    "sourceUri": "https://cdn.plus4u.net/uu-devkituuapptemplateg01/%s/uu_devkituuapptemplateg01.min.js",
+    "componentList": []
+  },
+  "uuAppDevKitg02": {
+    "production": {
+      "uu_app_devkitg02-uudck-core-uucli.uuAppDevKitEngineBaseUri": null,
+      "uu_app_devkitg02-uudck-core-uucli.uuScriptRepositoryBaseUri": "https://uuapp.plus4u.net/uu-script-repositoryg02/1f192881d218462ca51672456745de22",
+      "uu_app_devkitg02-uudck-core-uucli.plus4uGoBaseUri": "https://uuapp.plus4u.net/uu-plus4ugo-maing01/f34b62a867db4bd89490534bb26451ad"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "mode": "standard",
+  "data": {
+    "uuTerritoryBaseUri": "http://localhost:9090/uu-businessterritory-maing01/00000000000000000000000000000002",
+    "locationId": "69161ca4822f2959b3fae81a",
+    "name": "uuDevKitUuAppTemplate",
+    "desc": "uuDevKitUuAppTemplate"
+  }
+}

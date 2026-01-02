@@ -1,0 +1,20 @@
+{
+  "port": 8080,
+  "uuSubAppDataStoreMap": {
+    "primary": "mongodb://127.0.0.1:27018/devKitUuAppTemplateMainPrimary?directConnection=true"
+  },
+  "uu_app_binarystore_uri": "mongodb://127.0.0.1:27018/devKitUuAppTemplateMainBinary?directConnection=true",
+  "asid_license_owner_list": [
+    "7389-360-836-0000"
+  ],
+  "asid": "6098c5c9e8ad2785344a61d01babfb92",
+  "log_level": "INFO",
+  "script_console_base_uri": "http://localhost:9090/uu-console-maing02/33333333333333333333333333333332/",
+  "script_engine_base_uri": "http://localhost:9090/uu-script-engineg02/11111111111111111111111111111112/",
+  "script_repository_base_uri": "http://localhost:9090/uu-script-repositoryg02/44444444444444444444444444444442/",
+  "uu_app_oidc_providers_oidcg02_enabled": true,
+  "uu_app_oidc_primary_provider": "oidcg02",
+  "uu_app_oidc_providers_oidcg02_uri": "https://uuapp-dev.plus4u.net/uu-oidc-maing02/eca71064ecce44b0a25ce940eb8f053d/oidc",
+  "uu_app_objectstore_insert_oid": "all",
+  "embeddedMongoReplSet": true
+}

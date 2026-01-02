@@ -1,0 +1,52 @@
+{
+  "name": "uu_devkituuapptemplateg01",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "uu_devkituuapptemplateg01-core",
+    "uu_devkituuapptemplateg01"
+  ],
+  "description": "",
+  "license": "License Commercial",
+  "spec": "nodejs-multi; uu_appg01_devkit@6.8.1; uu5devkitg01-plugin@1.7.2",
+  "dependencies": {
+    "uu_app_devkitg02-uu5lib-uudck-uucli": "latest"
+  },
+  "uuBuildSettings": {},
+  "devDependencies": {
+    "uu_appg01_devkit": "^6.8.1",
+    "uu5devkitg01-plugin": "^1.7.2",
+    "uu_cloudg02-devkit": "^0.16.1",
+    "uudck": "^0.3.3",
+    "uudck-core": "^0.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "clean": "uu_appg01_devkit clean",
+    "test": "uu_appg01_devkit test",
+    "testBrowser": "uu_appg01_devkit testBrowser",
+    "build": "uu_appg01_devkit build",
+    "package": "uu_appg01_devkit package",
+    "start": "uu_appg01_devkit start",
+    "prettify": "uu_appg01_devkit prettify",
+    "vulnerabilityScan": "uu_appg01_devkit vulnerabilityScan",
+    "uuAppDevKitUpgrade": "uu_appg01_devkit uuAppDevKitUpgrade",
+    "deploy": "uu_appg01_devkit deploy",
+    "uuAppBox": "uu_appg01_devkit uuAppBox",
+    "uu-safe-install": "npx uu-safe-install",
+    "uuCloudg02AppBoxCopy": "uu_cloudg02-devkit appBoxCopy",
+    "uuCloudg02AppBoxExport": "uu_cloudg02-devkit appBoxExport",
+    "uuCloudg02AppBoxImport": "uu_cloudg02-devkit appBoxImport",
+    "uuCloudg02AppBox": "uu_cloudg02-devkit appBox",
+    "uu5Deploy": "uu5devkitg01-plugin deploy",
+    "uu5UuAppLibraryRegistryDeploy": "uu5devkitg01-plugin uuAppLibraryRegistryDeploy",
+    "uu5LsiExport": "uu5devkitg01-plugin lsiExport",
+    "uu5LsiImport": "uu5devkitg01-plugin lsiImport",
+    "uuCloudg02Deploy": "uu_cloudg02-devkit deploy"
+  },
+  "prettier": {
+    "printWidth": 120
+  }
+}

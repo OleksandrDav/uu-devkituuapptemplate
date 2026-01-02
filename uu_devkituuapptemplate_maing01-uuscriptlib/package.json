@@ -1,0 +1,40 @@
+{
+  "name": "uu_devkituuapptemplate_maing01-uuscriptlib",
+  "version": "0.1.0",
+  "description": "",
+  "license": "License Commercial",
+  "namespace": "UuDevKitUuAppTemplate",
+  "spec": "nodejs-uuscriptlib; uu_appg01@1.12.3",
+  "dependencies": {
+    "uu_consoleg02-uulib": "^1.0.0"
+  },
+  "devDependencies": {
+    "uu_appg01_devkit": "^6.6.0",
+    "uu_script_devkitg01": "^1.12.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "clean": "uu_script_devkitg01 clean",
+    "test": "uu_script_devkitg01 test",
+    "build": "uu_script_devkitg01 build",
+    "package": "uu_script_devkitg01 package",
+    "prettify": "uu_script_devkitg01 prettify",
+    "createScript": "uu_script_devkitg01 createScript",
+    "remoteRunScript": "uu_script_devkitg01 remoteRunScript",
+    "uploadScript": "uu_script_devkitg01 uploadScript",
+    "uuAppBox": "uu_script_devkitg01 uuAppBox",
+    "uuCloudg02AppBox": "uu_script_devkitg01 uuCloudg02AppBox",
+    "uuScriptDeploy": "uu_script_devkitg01 uuScriptDeploy",
+    "uuScriptLibraryDeploy": "uu_script_devkitg01 uuScriptLibraryDeploy",
+    "uu-safe-install": "npx uu-safe-install"
+  },
+  "main": "src/index.js",
+  "files": [
+    "src"
+  ],
+  "prettier": {
+    "printWidth": 120
+  }
+}

@@ -1,0 +1,1082 @@
+{
+  "errorCodePrefix": "uu-devkituuapptemplate-main",
+  "uuAppWorkspace": {
+    "uuDevKitUuAppTemplate": {
+      "uuObjectType": "uuDevKitUuAppTemplate",
+      "uuDataStore": "devKitUuAppTemplateMainObjectStore",
+      "businessBrickHistoryType": "historizable",
+      "uuEccHistoryType": "historizable",
+      "uuEscHistoryType": "historizable",
+      "uuEbcHistoryType": "historizable",
+      "maxPageCount": 10,
+      "maxSectionCount": 20,
+      "maxEbcCollectionSetCount": 2,
+      "maxEbcCollectionCount": 10,
+      "maxEbcFileCount": 100,
+      "maxEscCollectionSetCount": 2,
+      "maxEscCollectionCount": 2,
+      "maxEscShapeCount": 100,
+      "allowedUuAppWorkspaceStateList": [
+        "created",
+        "beingInitialized",
+        "active",
+        "warning",
+        "problem",
+        "preClosed",
+        "closed"
+      ],
+      "uuCommandMap": {
+        "updateCmdProgress": {
+          "allowedUuAppWorkspaceStateList": ["beingInitialized", "active", "closed"]
+        },
+        "updateInitData": {
+          "allowedUuAppWorkspaceStateList": ["beingInitialized"]
+        },
+        "getUseCasePermission": {},
+        "ecc/document/get": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "ecc/document/load": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "ecc/document/listBySearchKey": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+
+        "ecc/document/listPageOrderVersions": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+
+        "ecc/document/listTrashedPages": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "ecc/document/getPageOrder": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+
+        "ecc/document/listVersions": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+
+        "ecc/document/getTreeStructure": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "ecc/document/update": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "ecc/document/restorePage": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "ecc/document/movePage": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "ecc/document/setBasicAttributes": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "ecc/document/setDefaults": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "ecc/document/setArtifactProfileMap": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "ecc/document/trashPage": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "ecc/document/deletePage": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "ecc/document/createPage": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "ecc/document/copyPage": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "ecc/document/importPage": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "ecc/document/updatePageOrder": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "ecc/document/setMainPage": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "ecc/page/load": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/page/getOneBySearchKey": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/page/listBySearchKey": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/page/get": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+
+        "ecc/page/listVersions": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+
+        "ecc/page/getTreeStructure": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/page/list": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/page/update": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/page/setUnderConstruction": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/page/setBasicAttributes": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/page/setArtifactProfileMap": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/page/setTopSectionData": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/page/setBottomSectionData": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/page/setControlledData": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/page/setMainPanelData": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/page/setSidePanelData": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/panel/moveSection": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/panel/setArtifactProfileMap": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/panel/setSectionRestrictions": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/panel/setTopSectionData": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/panel/setBottomSectionData": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/panel/setBasicAttributes": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/panel/restoreSection": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/panel/deleteSection": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/panel/listBySearchKey": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/panel/brListSectionOrders": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+
+        "ecc/panel/listSectionOrderVersions": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+
+        "ecc/panel/getSectionOrder": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+
+        "ecc/panel/listVersions": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+
+        "ecc/panel/listTrashedSections": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/panel/get": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/panel/load": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/panel/getTreeStructure": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/panel/createSection": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/panel/trashSection": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/panel/update": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/section/setContent": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/section/setUnderConstruction": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/section/setBasicAttributes": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/section/setArtifactProfileMap": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/section/listBySearchKey": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/section/get": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/section/load": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/section/getOneBySearchKey": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/section/list": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/section/lock": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/section/unlock": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/section/extendLock": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/section/update": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+
+        "ecc/section/listVersions": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+
+        "ecc/section/setControlledData": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/root/getTreeStructure": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collection/get": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collection/getOneBySearchKey": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collection/load": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collection/setBasicAttributes": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collection/update": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collection/setArtifactProfileMap": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collection/setSearchKey": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collection/list": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collection/listFiles": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collection/listTrashedFiles": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collection/countFiles": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collection/listBySearchKey": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+
+        "ebc/collection/listVersions": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+
+        "ebc/collection/createFile": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collection/trash": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collection/restore": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collection/setControlledData": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collectionSet/update": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collectionSet/get": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collectionSet/getOneBySearchKey": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collectionSet/load": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collectionSet/setBasicAttributes": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collectionSet/setArtifactProfileMap": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collectionSet/setControlledData": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collectionSet/setSearchKey": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collectionSet/createCollection": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collectionSet/list": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collectionSet/listBySearchKey": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+
+        "ebc/collectionSet/listVersions": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+
+        "ebc/file/update": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/updateData": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+
+        "ebc/file/copyVersionAsCurrent": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+
+        "ebc/file/get": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/getOneBySearchKey": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+
+        "ebc/file/getVersion": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+
+        "ebc/file/getData": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/getDataUri": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+
+        "ebc/file/getVersionData": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/getVersionDataUri": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/getVersionThumbnailData": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+
+        "ebc/file/getThumbnailData": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/list": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/listBySearchKey": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+
+        "ebc/file/listVersions": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+
+        "ebc/file/setBasicAttributes": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/setSearchKey": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/setControlledData": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/setArtifactProfileMap": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/trash": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/delete": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/restore": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/createAccessKey": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/download": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/lock": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/unlock": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/privilegedUnlock": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/extendLock": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "esc/collection/get": {},
+        "esc/collection/load": {},
+        "esc/collection/setBasicAttributes": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "esc/collection/createShape": {
+          "allowedUuAppWorkspaceStateList": ["created", "active", "warning", "problem"]
+        },
+        "esc/collection/update": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "esc/collection/setSearchKey": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "esc/collection/list": {},
+        "esc/collection/listBySearchKey": {},
+
+        "esc/collection/listVersions": {},
+
+        "esc/collection/listShapes": {},
+        "esc/collection/setArtifactProfileMap": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "esc/collection/trash": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "esc/collection/restore": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "esc/collectionSet/get": {},
+        "esc/collectionSet/load": {},
+        "esc/collectionSet/setBasicAttributes": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "esc/collectionSet/update": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "esc/collectionSet/setSearchKey": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "esc/collectionSet/setArtifactProfileMap": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "esc/collectionSet/createCollection": {
+          "allowedUuAppWorkspaceStateList": ["created", "active", "warning", "problem"]
+        },
+        "esc/collectionSet/list": {},
+        "esc/collectionSet/listBySearchKey": {},
+
+        "esc/collectionSet/listVersions": {},
+        "esc/shape/listVersions": {},
+
+        "esc/shape/get": {},
+        "esc/shape/getOneBySearchKey": {},
+        "esc/shape/load": {},
+        "esc/shape/list": {},
+        "esc/shape/listBySearchKey": {},
+        "esc/shape/setArtifactProfileMap": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "esc/shape/update": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "esc/shape/setControlledData": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "esc/shape/setData": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "esc/shape/setBasicAttributes": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "esc/shape/trash": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "esc/shape/restore": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "esc/shape/setSearchKey": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "esc/shape/copyVersionAsCurrent": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        }
+      }
+    },
+    "historizableObject": {
+      "uuDataStore": "devKitUuAppTemplateMainObjectStore",
+      "uuObjectType": "historizableObject",
+      "businessBrickHistoryType": "historizable",
+      "uuEccHistoryType": "historizable",
+      "uuEscHistoryType": "historizable",
+      "uuEbcHistoryType": "historizable",
+      "maxPageCount": 10,
+      "maxSectionCount": 20,
+      "maxEbcCollectionSetCount": 2,
+      "maxEbcCollectionCount": 10,
+      "maxEbcFileCount": 100,
+      "maxEscCollectionSetCount": 2,
+      "maxEscCollectionCount": 2,
+      "maxEscShapeCount": 100,
+      "allowedUuAppWorkspaceStateList": [
+        "created",
+        "beingInitialized",
+        "active",
+        "warning",
+        "problem",
+        "preClosed",
+        "closed"
+      ],
+      "uuCommandMap": {
+        "updateCmdProgress": {
+          "allowedUuAppWorkspaceStateList": ["beingInitialized", "active", "closed"]
+        },
+        "updateInitData": {
+          "allowedUuAppWorkspaceStateList": ["beingInitialized"]
+        },
+        "getUseCasePermission": {},
+        "ecc/document/get": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "ecc/document/load": {
+          "allowedUuAppWorkspaceStateList": ["initial", "active", "warning", "problem"],
+          "allowedUuBbStateList": ["initial", "active", "passive", "preClosed", "closed"]
+        },
+        "ecc/document/listBySearchKey": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "ecc/document/listPageOrderVersions": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "ecc/document/listTrashedPages": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "ecc/document/getPageOrder": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "ecc/document/listVersions": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "ecc/document/getTreeStructure": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "ecc/document/update": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "ecc/document/restorePage": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "ecc/document/movePage": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "ecc/document/setBasicAttributes": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "ecc/document/setDefaults": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "ecc/document/setArtifactProfileMap": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "ecc/document/trashPage": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "ecc/document/deletePage": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "ecc/document/createPage": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "ecc/document/copyPage": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "ecc/document/importPage": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "ecc/document/updatePageOrder": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "ecc/document/setMainPage": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "ecc/page/load": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/page/getOneBySearchKey": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/page/listBySearchKey": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/page/get": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/page/listVersions": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/page/getTreeStructure": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/page/list": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/page/update": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/page/setUnderConstruction": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/page/setBasicAttributes": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/page/setArtifactProfileMap": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/page/setTopSectionData": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/page/setBottomSectionData": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/page/setControlledData": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/page/setMainPanelData": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/page/setSidePanelData": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/listPages": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/listSections": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/panel/moveSection": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/panel/setArtifactProfileMap": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/panel/setSectionRestrictions": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/panel/setTopSectionData": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/panel/setBottomSectionData": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/panel/setBasicAttributes": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/panel/restoreSection": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/panel/deleteSection": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/panel/listBySearchKey": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/panel/brListSectionOrders": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/panel/listSectionOrderVersions": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/panel/getSectionOrder": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/panel/listVersions": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/panel/listTrashedSections": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/panel/get": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/panel/load": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/panel/getTreeStructure": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/panel/createSection": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/panel/trashSection": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/panel/update": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/section/setContent": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/section/setUnderConstruction": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/section/setBasicAttributes": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/section/setArtifactProfileMap": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/section/listBySearchKey": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/section/get": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/section/load": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/section/getOneBySearchKey": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/section/list": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/section/lock": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/section/unlock": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/section/extendLock": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/section/update": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/section/listVersions": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ecc/section/setControlledData": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/root/getTreeStructure": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collection/get": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collection/getOneBySearchKey": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collection/load": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collection/setBasicAttributes": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collection/update": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collection/setArtifactProfileMap": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collection/setSearchKey": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collection/list": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collection/listFiles": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collection/listTrashedFiles": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collection/countFiles": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collection/listBySearchKey": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collection/listVersions": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collection/createFile": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collection/trash": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collection/restore": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collection/setControlledData": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collectionSet/update": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collectionSet/get": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collectionSet/getOneBySearchKey": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collectionSet/load": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collectionSet/setBasicAttributes": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collectionSet/setArtifactProfileMap": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collectionSet/setControlledData": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collectionSet/setSearchKey": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collectionSet/createCollection": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collectionSet/list": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collectionSet/listBySearchKey": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/collectionSet/listVersions": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/update": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/updateData": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/copyVersionAsCurrent": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/get": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/getOneBySearchKey": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/getVersion": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/getData": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/getDataUri": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/getVersionData": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/getVersionDataUri": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/getVersionThumbnailData": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/getThumbnailData": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/list": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/listBySearchKey": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/listVersions": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/setBasicAttributes": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/setSearchKey": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/setControlledData": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/setArtifactProfileMap": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/trash": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/delete": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/restore": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/createAccessKey": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/download": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/lock": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/unlock": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/privilegedUnlock": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "ebc/file/extendLock": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem", "preClosed", "closed"]
+        },
+        "esc/collection/get": {},
+        "esc/collection/load": {},
+        "esc/collection/setBasicAttributes": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "esc/collection/createShape": {
+          "allowedUuAppWorkspaceStateList": ["created", "active", "warning", "problem"]
+        },
+        "esc/collection/update": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "esc/collection/setSearchKey": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "esc/collection/list": {},
+        "esc/collection/listBySearchKey": {},
+        "esc/collection/listVersions": {},
+        "esc/collection/listShapes": {},
+        "esc/collection/setArtifactProfileMap": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "esc/collection/trash": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "esc/collection/restore": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "esc/collectionSet/get": {},
+        "esc/collectionSet/load": {},
+        "esc/collectionSet/setBasicAttributes": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "esc/collectionSet/update": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "esc/collectionSet/setSearchKey": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "esc/collectionSet/setArtifactProfileMap": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "esc/collectionSet/createCollection": {
+          "allowedUuAppWorkspaceStateList": ["created", "active", "warning", "problem"]
+        },
+        "esc/collectionSet/list": {},
+        "esc/collectionSet/listVersions": {},
+        "esc/collectionSet/listBySearchKey": {},
+        "esc/shape/get": {},
+        "esc/shape/getOneBySearchKey": {},
+        "esc/shape/load": {},
+        "esc/shape/list": {},
+        "esc/shape/listBySearchKey": {},
+        "esc/shape/listVersions": {},
+        "esc/shape/setArtifactProfileMap": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "esc/shape/update": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "esc/shape/setControlledData": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "esc/shape/setData": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "esc/shape/setBasicAttributes": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "esc/shape/trash": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "esc/shape/restore": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "esc/shape/setSearchKey": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        },
+        "esc/shape/copyVersionAsCurrent": {
+          "allowedUuAppWorkspaceStateList": ["active", "warning", "problem"]
+        }
+      }
+    },
+    "sys": {
+      "uuObjectType": "uuDevKitUuAppTemplate",
+      "uuDataStore": "devKitUuAppTemplateMainObjectStore",
+      "businessBrickHistoryType": "historizable",
+      "uuEccHistoryType": "historizable",
+      "uuEscHistoryType": "historizable",
+      "uuEbcHistoryType": "historizable",
+      "uuCommandMap": {
+        "uuAppWorkspace/_initFinalize": {
+          "allowedUuAppWorkspaceStateList": ["beingInitialized"]
+        },
+        "uuAppWorkspace/_initFinalizeRollback": {
+          "allowedUuAppWorkspaceStateList": ["created", "beingInitialized"]
+        },
+        "uuAppWorkspace/load": {
+          "allowedUuAppWorkspaceStateList": [
+            "created",
+            "beingInitialized",
+            "active",
+            "warning",
+            "problem",
+            "preClosed",
+            "closed"
+          ]
+        },
+        "uuAppWorkspace/clear": {
+          "allowedUuAppWorkspaceStateList": ["closed"]
+        },
+        "uuAppWorkspace/_clearFinalize": {
+          "allowedUuAppWorkspaceStateList": ["closed"]
+        }
+      }
+    }
+  },
+  "uuAppTypeMap": {}
+}

@@ -1,0 +1,21 @@
+{
+  "vendor": "uu",
+  "uuApp": "devKitUuAppTemplate",
+  "uuSubApp": "main",
+  "generation": "g01",
+  "port": "9090",
+  "host": "http://localhost",
+  "uuGatewayBaseUri": "http://localhost:9090/uu-gateway-maing02/99999999999999999999999999999992",
+  "uuBusinessTerritoryBaseUri": "http://localhost:9090/uu-businessterritory-maing01/00000000000000000000000000000002",
+  "asidMap": {
+    "6098c5c9e8ad2785344a61d01babfb92": {
+      "initToken": null,
+      "clientSecret": "@C%0Zu7Qdb6mPN-$MtF8UwxN$5qaW5TP1kLw26$kZVyJ37+7A-33X_AJXw-VBSb6",
+      "awidMap": {
+        "dd1ff736deaf5a3497ac5d3f7fa8c87f": {
+          "clientSecret": "2408D0b988_+89@045580T5734!261@596j0_P#$PY@r4$34n08Sq9ZH5893jk15"
+        }
+      }
+    }
+  }
+}

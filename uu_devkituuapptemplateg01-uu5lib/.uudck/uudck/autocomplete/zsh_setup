@@ -1,0 +1,7 @@
+
+fpath=(
+D:\uu_devkituuapptemplate_maing01\uu_devkituuapptemplateg01\.uudck\uudck\autocomplete\functions\zsh
+$fpath
+);
+autoload -Uz compinit;
+compinit;

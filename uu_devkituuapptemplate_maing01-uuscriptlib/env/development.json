@@ -1,0 +1,8 @@
+{
+  "uuapp.perflog.logger.log_level": "WARN",
+  "scriptEngineBaseUri": "----- VALUE REQUIRED -----",
+  "scriptConsoleUri": "----- VALUE REQUIRED -----",
+  "createBinaryUri": "----- VALUE REQUIRED -----",
+  "scriptRepositoryBaseUri": "http://localhost:9090/uu-script-repositoryg02/44444444444444444444444444444442/",
+  "uu_app_oidc_providers_oidcg02_uri": "https://uuapp-dev.plus4u.net/uu-oidc-maing02/eca71064ecce44b0a25ce940eb8f053d/oidc"
+}

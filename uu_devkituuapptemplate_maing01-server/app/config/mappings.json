@@ -1,0 +1,1471 @@
+{
+  "{vendor}-{uuApp}-{uuSubApp}": {
+    "useCaseMap": {
+      "sys/uuSubAppInstance/commence": {
+        "realization": "api/controllers/DevKitUuAppTemplateMainController.commence",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "sys/uuAppWorkspace/init": {
+        "realization": "api/controllers/DevKitUuAppTemplateMainController.init",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "sys/uuAppWorkspace/_initFinalize": {
+        "realization": "api/controllers/DevKitUuAppTemplateMainController._initFinalize",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "sys/uuAppWorkspace/_initFinalizeRollback": {
+        "realization": "api/controllers/DevKitUuAppTemplateMainController._initFinalizeRollback",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "sys/uuAppWorkspace/load": {
+        "realization": "api/controllers/DevKitUuAppTemplateMainController.load",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "sys/uuAppWorkspace/loadBasicData": {
+        "realization": "api/controllers/DevKitUuAppTemplateMainController.loadBasicData",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "sys/uuAppWorkspace/setStateClosed": {
+        "realization": "api/controllers/DevKitUuAppTemplateMainController.setStateClosed",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "sys/uuAppWorkspace/_setStateClosedFinalize": {
+        "realization": "api/controllers/DevKitUuAppTemplateMainController._setStateClosedFinalize",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "sys/uuAppWorkspace/clear": {
+        "realization": "api/controllers/DevKitUuAppTemplateMainController.clear",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "sys/uuAppWorkspace/_clearFinalize": {
+        "realization": "api/controllers/DevKitUuAppTemplateMainController._clearFinalize",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/getUseCasePermission": {
+        "realization": "uu_businessbrickg02_common:api/controllers/UseCaseConfigController.getUseCasePermission",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/document/trashPage": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccDocumentController.trashPage",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+
+      "uuDevKitUuAppTemplate/ecc/document/deletePage": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccDocumentController.deletePage",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+
+      "uuDevKitUuAppTemplate/ecc/document/setMainPage": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccDocumentController.setMainPage",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/document/updatePageOrder": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccDocumentController.updatePageOrder",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/document/createPage": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccDocumentController.createPage",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/document/copyPage": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccDocumentController.copyPage",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/document/importPage": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccDocumentController.importPage",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/document/get": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccDocumentController.get",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/document/load": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccDocumentController.load",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+
+      "uuDevKitUuAppTemplate/ecc/document/listPageOrderVersions": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccDocumentController.listPageOrderVersions",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+
+      "uuDevKitUuAppTemplate/ecc/document/getPageOrder": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccDocumentController.getPageOrder",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+
+      "uuDevKitUuAppTemplate/ecc/document/listVersions": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccDocumentController.listVersions",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+
+      "uuDevKitUuAppTemplate/ecc/document/listTrashedPages": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccDocumentController.listTrashedPages",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/document/getTreeStructure": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccDocumentController.getTreeStructure",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/document/listBySearchKey": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccDocumentController.listBySearchKey",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/document/update": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccDocumentController.update",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/document/restorePage": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccDocumentController.restorePage",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/document/movePage": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccDocumentController.movePage",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/document/setBasicAttributes": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccDocumentController.setBasicAttributes",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/document/setDefaults": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccDocumentController.setDefaults",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/document/setArtifactProfileMap": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccDocumentController.setArtifactProfileMap",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/page/update": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPageController.update",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/page/setUnderConstruction": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPageController.setUnderConstruction",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/page/setSidePanelData": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPageController.setSidePanelData",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/page/setMainPanelData": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPageController.setMainPanelData",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/page/setBottomSectionData": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPageController.setBottomSectionData",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/page/setTopSectionData": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPageController.setTopSectionData",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/page/setArtifactProfileMap": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPageController.setArtifactProfileMap",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/page/setControlledData": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPageController.setControlledData",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/page/setBasicAttributes": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPageController.setBasicAttributes",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/page/load": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPageController.load",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/page/getOneBySearchKey": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPageController.getOneBySearchKey",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+
+      "uuDevKitUuAppTemplate/ecc/page/listVersions": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPageController.listVersions",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+
+      "uuDevKitUuAppTemplate/ecc/page/listBySearchKey": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPageController.listBySearchKey",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/page/getTreeStructure": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPageController.getTreeStructure",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/page/list": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPageController.list",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/page/get": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPageController.get",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/panel/restoreSection": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPanelController.restoreSection",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+
+      "uuDevKitUuAppTemplate/ecc/panel/deleteSection": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPanelController.deleteSection",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+
+      "uuDevKitUuAppTemplate/ecc/panel/update": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPanelController.update",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/panel/setBasicAttributes": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPanelController.setBasicAttributes",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/panel/setBottomSectionData": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPanelController.setBottomSectionData",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/panel/setTopSectionData": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPanelController.setTopSectionData",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/panel/setSectionRestrictions": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPanelController.setSectionRestrictions",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/panel/setArtifactProfileMap": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPanelController.setArtifactProfileMap",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/panel/listBySearchKey": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPanelController.listBySearchKey",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/panel/getTreeStructure": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPanelController.getTreeStructure",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+
+      "uuDevKitUuAppTemplate/ecc/panel/listSectionOrderVersions": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPanelController.listSectionOrderVersions",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+
+      "uuDevKitUuAppTemplate/ecc/panel/getSectionOrder": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPanelController.getSectionOrder",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+
+      "uuDevKitUuAppTemplate/ecc/panel/listVersions": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPanelController.listVersions",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+
+      "uuDevKitUuAppTemplate/ecc/panel/listTrashedSections": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPanelController.listTrashedSections",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/panel/load": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPanelController.load",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/panel/get": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPanelController.get",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/panel/createSection": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPanelController.createSection",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/panel/trashSection": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPanelController.trashSection",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/panel/moveSection": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPanelController.moveSection",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+
+      "uuDevKitUuAppTemplate/ecc/section/update": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccSectionController.update",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/section/lock": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccSectionController.lock",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/section/unlock": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccSectionController.unlock",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/section/setContent": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccSectionController.setContent",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/section/setUnderConstruction": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccSectionController.setUnderConstruction",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/section/setBasicAttributes": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccSectionController.setBasicAttributes",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/section/setArtifactProfileMap": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccSectionController.setArtifactProfileMap",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/section/extendLock": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccSectionController.extendLock",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+
+      "uuDevKitUuAppTemplate/ecc/section/listVersions": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccSectionController.listVersions",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+
+      "uuDevKitUuAppTemplate/ecc/section/load": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccSectionController.load",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/section/getOneBySearchKey": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccSectionController.getOneBySearchKey",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/section/get": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccSectionController.get",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/section/list": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccSectionController.list",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/section/setControlledData": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccSectionController.setControlledData",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ecc/section/listBySearchKey": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccSectionController.listBySearchKey",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+
+      "uuDevKitUuAppTemplate/ebc/root/getTreeStructure": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcRootController.getTreeStructure",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ebc/collection/get": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionController.get",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ebc/collection/getOneBySearchKey": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionController.getOneBySearchKey",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ebc/collection/load": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionController.load",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ebc/collection/update": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionController.update",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ebc/collection/setBasicAttributes": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionController.setBasicAttributes",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ebc/collection/setArtifactProfileMap": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionController.setArtifactProfileMap",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ebc/collection/setSearchKey": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionController.setSearchKey",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ebc/collection/list": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionController.list",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ebc/collection/listFiles": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionController.listFiles",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ebc/collection/countFiles": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionController.countFiles",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ebc/collection/listTrashedFiles": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionController.listTrashedFiles",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ebc/collection/listBySearchKey": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionController.listBySearchKey",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+
+      "uuDevKitUuAppTemplate/ebc/collection/listVersions": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionController.listVersions",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+
+      "uuDevKitUuAppTemplate/ebc/collection/createFile": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionController.createFile",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ebc/collection/trash": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionController.trash",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ebc/collection/restore": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionController.restore",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ebc/collection/setControlledData": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionController.setControlledData",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+
+      "uuDevKitUuAppTemplate/ebc/collectionSet/get": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionSetController.get",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ebc/collectionSet/getOneBySearchKey": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionSetController.getOneBySearchKey",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ebc/collectionSet/load": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionSetController.load",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ebc/collectionSet/update": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionSetController.update",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ebc/collectionSet/setBasicAttributes": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionSetController.setBasicAttributes",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ebc/collectionSet/setArtifactProfileMap": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionSetController.setArtifactProfileMap",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ebc/collectionSet/setControlledData": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionSetController.setControlledData",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ebc/collectionSet/setSearchKey": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionSetController.setSearchKey",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ebc/collectionSet/createCollection": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionSetController.createCollection",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ebc/collectionSet/list": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionSetController.list",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ebc/collectionSet/listBySearchKey": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionSetController.listBySearchKey",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+
+      "uuDevKitUuAppTemplate/ebc/collectionSet/listVersions": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionSetController.listVersions",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+
+      "uuDevKitUuAppTemplate/ebc/file/lock": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.lock",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ebc/file/unlock": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.unlock",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ebc/file/privilegedUnlock": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.privilegedUnlock",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ebc/file/extendLock": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.extendLock",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ebc/file/update": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.update",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ebc/file/updateData": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.updateData",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+
+      "uuDevKitUuAppTemplate/ebc/file/copyVersionAsCurrent": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.copyVersionAsCurrent",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+
+      "uuDevKitUuAppTemplate/ebc/file/get": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.get",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+
+      "uuDevKitUuAppTemplate/ebc/file/getVersionThumbnailData": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.getVersionThumbnailData",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+
+      "uuDevKitUuAppTemplate/ebc/file/getThumbnailData": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.getThumbnailData",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ebc/file/getOneBySearchKey": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.getOneBySearchKey",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+
+      "uuDevKitUuAppTemplate/ebc/file/getVersion": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.getVersion",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+
+      "uuDevKitUuAppTemplate/ebc/file/getData": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.getData",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ebc/file/getDataUri": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.getDataUri",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+
+      "uuDevKitUuAppTemplate/ebc/file/getVersionData": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.getVersionData",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ebc/file/getVersionDataUri": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.getVersionDataUri",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+
+      "uuDevKitUuAppTemplate/ebc/file/list": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.list",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ebc/file/listBySearchKey": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.listBySearchKey",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+
+      "uuDevKitUuAppTemplate/ebc/file/listVersions": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.listVersions",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+
+      "uuDevKitUuAppTemplate/ebc/file/setBasicAttributes": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.setBasicAttributes",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ebc/file/setSearchKey": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.setSearchKey",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ebc/file/setControlledData": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.setControlledData",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ebc/file/setArtifactProfileMap": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.setArtifactProfileMap",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ebc/file/trash": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.trash",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+
+      "uuDevKitUuAppTemplate/ebc/file/restore": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.restore",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ebc/file/createAccessKey": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.createAccessKey",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "uuDevKitUuAppTemplate/ebc/file/download": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.download",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "defaultUve": {
+        "realization": "index.html",
+        "httpMethod": "GET",
+        "type": "UVE"
+      },
+      "sys/uuAppWorkspace/initUve": {
+        "realization": "index.html",
+        "httpMethod": "GET",
+        "type": "UVE"
+      },
+      "sys/uuAppWorkspace/apiConsole": {
+        "realization": "api-console.html",
+        "httpMethod": "GET",
+        "type": "UVE"
+      },
+      "historizableObject/create": {
+        "realization": "api/controllers/HistorizableObjectController.create",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/_createFinalize": {
+        "realization": "api/controllers/HistorizableObjectController._createFinalize",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/_createFinalizeRollback": {
+        "realization": "api/controllers/HistorizableObjectController._createFinalizeRollback",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/getUseCasePermission": {
+        "realization": "uu_businessbrickg02_common:api/controllers/UseCaseConfigController.getUseCasePermission",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/update": {
+        "realization": "api/controllers/HistorizableObjectController.update",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/list": {
+        "realization": "api/controllers/HistorizableObjectController.list",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/get": {
+        "realization": "api/controllers/HistorizableObjectController.get",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/setState": {
+        "realization": "api/controllers/HistorizableObjectController.setState",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/setStateClosed": {
+        "realization": "api/controllers/HistorizableObjectController.setStateClosed",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/delete": {
+        "realization": "api/controllers/HistorizableObjectController.delete",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/load": {
+        "realization": "api/controllers/HistorizableObjectController.load",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ebc/root/getTreeStructure": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcRootController.getTreeStructure",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ebc/collection/get": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionController.get",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ebc/collection/getOneBySearchKey": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionController.getOneBySearchKey",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ebc/collection/load": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionController.load",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ebc/collection/update": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionController.update",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ebc/collection/setBasicAttributes": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionController.setBasicAttributes",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ebc/collection/setArtifactProfileMap": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionController.setArtifactProfileMap",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ebc/collection/setSearchKey": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionController.setSearchKey",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ebc/collection/list": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionController.list",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ebc/collection/listFiles": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionController.listFiles",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ebc/collection/countFiles": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionController.countFiles",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ebc/collection/listTrashedFiles": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionController.listTrashedFiles",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ebc/collection/listBySearchKey": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionController.listBySearchKey",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+
+      "historizableObject/ebc/collection/listVersions": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionController.listVersions",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+
+      "historizableObject/ebc/collection/createFile": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionController.createFile",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ebc/collection/trash": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionController.trash",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ebc/collection/restore": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionController.restore",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ebc/collection/setControlledData": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionController.setControlledData",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+
+      "historizableObject/ebc/collectionSet/get": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionSetController.get",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ebc/collectionSet/getOneBySearchKey": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionSetController.getOneBySearchKey",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ebc/collectionSet/load": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionSetController.load",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ebc/collectionSet/update": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionSetController.update",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ebc/collectionSet/setBasicAttributes": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionSetController.setBasicAttributes",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ebc/collectionSet/setArtifactProfileMap": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionSetController.setArtifactProfileMap",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ebc/collectionSet/setControlledData": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionSetController.setControlledData",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ebc/collectionSet/setSearchKey": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionSetController.setSearchKey",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ebc/collectionSet/createCollection": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionSetController.createCollection",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ebc/collectionSet/list": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionSetController.list",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ebc/collectionSet/listBySearchKey": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionSetController.listBySearchKey",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+
+      "historizableObject/ebc/collectionSet/listVersions": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcCollectionSetController.listVersions",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+
+      "historizableObject/ebc/file/lock": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.lock",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ebc/file/unlock": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.unlock",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ebc/file/privilegedUnlock": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.privilegedUnlock",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ebc/file/extendLock": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.extendLock",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ebc/file/update": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.update",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ebc/file/updateData": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.updateData",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+
+      "historizableObject/ebc/file/copyVersionAsCurrent": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.copyVersionAsCurrent",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+
+      "historizableObject/ebc/file/get": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.get",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+
+      "historizableObject/ebc/file/getVersionThumbnailData": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.getVersionThumbnailData",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+
+      "historizableObject/ebc/file/getThumbnailData": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.getThumbnailData",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ebc/file/getOneBySearchKey": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.getOneBySearchKey",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+
+      "historizableObject/ebc/file/getVersion": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.getVersion",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+
+      "historizableObject/ebc/file/getData": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.getData",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ebc/file/getDataUri": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.getDataUri",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+
+      "historizableObject/ebc/file/getVersionData": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.getVersionData",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ebc/file/getVersionDataUri": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.getVersionDataUri",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+
+      "historizableObject/ebc/file/list": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.list",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ebc/file/listBySearchKey": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.listBySearchKey",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+
+      "historizableObject/ebc/file/listVersions": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.listVersions",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+
+      "historizableObject/ebc/file/setBasicAttributes": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.setBasicAttributes",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ebc/file/setSearchKey": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.setSearchKey",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ebc/file/setControlledData": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.setControlledData",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ebc/file/setArtifactProfileMap": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.setArtifactProfileMap",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ebc/file/trash": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.trash",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+
+      "historizableObject/ebc/file/restore": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.restore",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ebc/file/createAccessKey": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.createAccessKey",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ebc/file/download": {
+        "realization": "uu_businessbrickg02_ebc:api/controllers/UuBusinessBrickEbcFileController.download",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/document/trashPage": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccDocumentController.trashPage",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/document/deletePage": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccDocumentController.deletePage",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/document/setMainPage": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccDocumentController.setMainPage",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/document/updatePageOrder": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccDocumentController.updatePageOrder",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/document/createPage": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccDocumentController.createPage",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/document/copyPage": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccDocumentController.copyPage",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/document/importPage": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccDocumentController.importPage",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/document/get": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccDocumentController.get",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/document/load": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccDocumentController.load",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/document/listPageOrderVersions": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccDocumentController.listPageOrderVersions",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/document/getPageOrder": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccDocumentController.getPageOrder",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/document/listVersions": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccDocumentController.listVersions",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/document/listTrashedPages": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccDocumentController.listTrashedPages",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/document/getTreeStructure": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccDocumentController.getTreeStructure",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/document/listBySearchKey": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccDocumentController.listBySearchKey",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/document/update": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccDocumentController.update",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/document/restorePage": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccDocumentController.restorePage",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/document/movePage": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccDocumentController.movePage",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/document/setBasicAttributes": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccDocumentController.setBasicAttributes",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/document/setDefaults": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccDocumentController.setDefaults",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/document/setArtifactProfileMap": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccDocumentController.setArtifactProfileMap",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/page/update": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPageController.update",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/page/setUnderConstruction": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPageController.setUnderConstruction",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/page/setSidePanelData": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPageController.setSidePanelData",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/page/setMainPanelData": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPageController.setMainPanelData",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/page/setBottomSectionData": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPageController.setBottomSectionData",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/page/setTopSectionData": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPageController.setTopSectionData",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/page/setArtifactProfileMap": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPageController.setArtifactProfileMap",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/page/setControlledData": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPageController.setControlledData",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/page/setBasicAttributes": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPageController.setBasicAttributes",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/page/load": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPageController.load",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/page/getOneBySearchKey": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPageController.getOneBySearchKey",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/page/listVersions": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPageController.listVersions",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/page/list": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPageController.list",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/page/getTreeStructure": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPageController.getTreeStructure",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/page/listBySearchKey": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPageController.listBySearchKey",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/page/get": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPageController.get",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/panel/restoreSection": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPanelController.restoreSection",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/panel/deleteSection": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPanelController.deleteSection",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/panel/update": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPanelController.update",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/panel/setBasicAttributes": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPanelController.setBasicAttributes",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/panel/setBottomSectionData": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPanelController.setBottomSectionData",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/panel/setTopSectionData": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPanelController.setTopSectionData",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/panel/setSectionRestrictions": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPanelController.setSectionRestrictions",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/panel/setArtifactProfileMap": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPanelController.setArtifactProfileMap",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/panel/listBySearchKey": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPanelController.listBySearchKey",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/panel/getTreeStructure": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPanelController.getTreeStructure",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/panel/listSectionOrderVersions": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPanelController.listSectionOrderVersions",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/panel/getSectionOrder": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPanelController.getSectionOrder",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/panel/listVersions": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPanelController.listVersions",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/panel/listTrashedSections": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPanelController.listTrashedSections",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/panel/load": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPanelController.load",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/panel/get": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPanelController.get",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/panel/createSection": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPanelController.createSection",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/panel/trashSection": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPanelController.trashSection",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/panel/moveSection": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPanelController.moveSection",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/section/update": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccSectionController.update",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/section/lock": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccSectionController.lock",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/section/unlock": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccSectionController.unlock",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/section/setContent": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccSectionController.setContent",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/section/setUnderConstruction": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccSectionController.setUnderConstruction",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/section/setBasicAttributes": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccSectionController.setBasicAttributes",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/section/setArtifactProfileMap": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccSectionController.setArtifactProfileMap",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/section/extendLock": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccSectionController.extendLock",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/section/listVersions": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccSectionController.listVersions",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/section/load": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccSectionController.load",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/section/getOneBySearchKey": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccSectionController.getOneBySearchKey",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/section/get": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccSectionController.get",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/section/list": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccSectionController.list",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/section/setControlledData": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccSectionController.setControlledData",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/section/listBySearchKey": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccSectionController.listBySearchKey",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/listPages": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccPageController.list",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "historizableObject/ecc/listSections": {
+        "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccSectionController.list",
+        "httpMethod": "GET",
+        "type": "CMD"
+      }
+    }
+  }
+}

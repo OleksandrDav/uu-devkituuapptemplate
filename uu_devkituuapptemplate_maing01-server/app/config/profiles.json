@@ -1,0 +1,1242 @@
+{
+  "{asid}": {
+    "profileList": ["AsidAuthorities", "AsidOperatives", "AsidLicenseOwner", "Public"],
+    "useCaseMap": {
+      "sys/uuSubAppInstance/commence": {
+        "sysStateList": ["active", "restricted"],
+        "profileList": ["AsidAuthorities", "AsidOperatives"]
+      }
+    }
+  },
+  "*": {
+    "profileList": [
+      "Authorities",
+      "Operatives",
+      "Auditors",
+      "SystemIdentity",
+      "AwidInitiator",
+      "Authenticated",
+      "Public"
+    ],
+    "useCaseMap": {
+      "sys/uuAppWorkspace/init": {
+        "sysStateList": ["assigned", "beingInitialized"],
+        "profileList": ["AwidInitiator"]
+      },
+      "sys/uuAppWorkspace/_initFinalize": {
+        "sysStateList": ["beingInitialized"],
+        "profileList": ["SystemIdentity"]
+      },
+      "sys/uuAppWorkspace/_initFinalizeRollback": {
+        "sysStateList": ["beingInitialized"],
+        "profileList": ["SystemIdentity"]
+      },
+      "sys/uuAppWorkspace/load": {
+        "sysStateList": [
+          "created",
+          "assigned",
+          "beingInitialized",
+          "active",
+          "restricted",
+          "readOnly",
+          "closed",
+          "suspended"
+        ],
+        "profileList": ["Authenticated"]
+      },
+      "sys/uuAppWorkspace/loadBasicData": {
+        "sysStateList": [
+          "created",
+          "assigned",
+          "beingInitialized",
+          "active",
+          "restricted",
+          "readOnly",
+          "closed",
+          "suspended"
+        ],
+        "profileList": ["Public"]
+      },
+      "sys/uuAppWorkspace/setStateClosed": {
+        "sysStateList": ["restricted"],
+        "profileList": ["Authorities"]
+      },
+      "sys/uuAppWorkspace/_setStateClosedFinalize": {
+        "sysStateList": ["restricted"],
+        "profileList": ["SystemIdentity"]
+      },
+      "sys/uuAppWorkspace/clear": {
+        "sysStateList": ["restricted"],
+        "profileList": ["Authorities", "AwidInitiator"]
+      },
+      "sys/uuAppWorkspace/_clearFinalize": {
+        "sysStateList": ["restricted"],
+        "profileList": ["SystemIdentity"]
+      },
+      "uuDevKitUuAppTemplate/getUseCasePermission": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "uuDevKitUuAppTemplate/ecc/document/get": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "uuDevKitUuAppTemplate/ecc/document/load": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "uuDevKitUuAppTemplate/ecc/document/listBySearchKey": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+
+      "uuDevKitUuAppTemplate/ecc/document/listPageOrderVersions": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+
+      "uuDevKitUuAppTemplate/ecc/document/listTrashedPages": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "uuDevKitUuAppTemplate/ecc/document/getPageOrder": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+
+      "uuDevKitUuAppTemplate/ecc/document/listVersions": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+
+      "uuDevKitUuAppTemplate/ecc/document/getTreeStructure": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "uuDevKitUuAppTemplate/ecc/document/update": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ecc/document/restorePage": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ecc/document/movePage": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ecc/document/setBasicAttributes": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ecc/document/setDefaults": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ecc/document/setArtifactProfileMap": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities"]
+      },
+      "uuDevKitUuAppTemplate/ecc/document/trashPage": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+
+      "uuDevKitUuAppTemplate/ecc/document/deletePage": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+
+      "uuDevKitUuAppTemplate/ecc/document/createPage": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ecc/document/copyPage": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "uuDevKitUuAppTemplate/ecc/document/importPage": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ecc/document/updatePageOrder": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ecc/document/setMainPage": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+
+      "uuDevKitUuAppTemplate/ecc/page/load": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "uuDevKitUuAppTemplate/ecc/page/getOneBySearchKey": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "uuDevKitUuAppTemplate/ecc/page/listBySearchKey": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "uuDevKitUuAppTemplate/ecc/page/get${ constants.byBidCommandSuffix }": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+
+      "uuDevKitUuAppTemplate/ecc/page/listVersions": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+
+      "uuDevKitUuAppTemplate/ecc/page/getTreeStructure": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "uuDevKitUuAppTemplate/ecc/page/list": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "uuDevKitUuAppTemplate/ecc/page/update": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ecc/page/setUnderConstruction": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ecc/page/setBasicAttributes": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ecc/page/setArtifactProfileMap": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities"]
+      },
+      "uuDevKitUuAppTemplate/ecc/page/setTopSectionData": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ecc/page/setBottomSectionData": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ecc/page/setControlledData": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ecc/page/setMainPanelData": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ecc/page/setSidePanelData": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ecc/panel/moveSection": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ecc/panel/setArtifactProfileMap": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities"]
+      },
+      "uuDevKitUuAppTemplate/ecc/panel/setSectionRestrictions": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ecc/panel/setTopSectionData": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ecc/panel/setBottomSectionData": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ecc/panel/setBasicAttributes": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ecc/panel/restoreSection": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+
+      "uuDevKitUuAppTemplate/ecc/panel/deleteSection": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+
+      "uuDevKitUuAppTemplate/ecc/panel/listBySearchKey": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+
+      "uuDevKitUuAppTemplate/ecc/panel/listSectionOrderVersions": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+
+      "uuDevKitUuAppTemplate/ecc/panel/getSectionOrder": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+
+      "uuDevKitUuAppTemplate/ecc/panel/listVersions": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+
+      "uuDevKitUuAppTemplate/ecc/panel/listTrashedSections": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "uuDevKitUuAppTemplate/ecc/panel/get": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "uuDevKitUuAppTemplate/ecc/panel/load": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "uuDevKitUuAppTemplate/ecc/panel/getTreeStructure": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "uuDevKitUuAppTemplate/ecc/panel/createSection": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ecc/panel/trashSection": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ecc/panel/update": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+
+      "uuDevKitUuAppTemplate/ecc/section/setContent": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ecc/section/setUnderConstruction": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ecc/section/setBasicAttributes": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ecc/section/setArtifactProfileMap": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities"]
+      },
+      "uuDevKitUuAppTemplate/ecc/section/listBySearchKey": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "uuDevKitUuAppTemplate/ecc/section/get": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "uuDevKitUuAppTemplate/ecc/section/load": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "uuDevKitUuAppTemplate/ecc/section/getOneBySearchKey": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "uuDevKitUuAppTemplate/ecc/section/list": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "uuDevKitUuAppTemplate/ecc/section/lock": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ecc/section/unlock": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ecc/section/extendLock": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ecc/section/update": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+
+      "uuDevKitUuAppTemplate/ecc/section/listVersions": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+
+      "uuDevKitUuAppTemplate/ecc/section/setControlledData": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+
+      "uuDevKitUuAppTemplate/ebc/root/getTreeStructure": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "uuDevKitUuAppTemplate/ebc/collection/get": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "uuDevKitUuAppTemplate/ebc/collection/getOneBySearchKey": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "uuDevKitUuAppTemplate/ebc/collection/load": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "uuDevKitUuAppTemplate/ebc/collection/setBasicAttributes": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ebc/collection/update": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ebc/collection/setArtifactProfileMap": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities"]
+      },
+      "uuDevKitUuAppTemplate/ebc/collection/setSearchKey": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ebc/collection/list": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "uuDevKitUuAppTemplate/ebc/collection/listFiles": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "uuDevKitUuAppTemplate/ebc/collection/listTrashedFiles": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "uuDevKitUuAppTemplate/ebc/collection/countFiles": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "uuDevKitUuAppTemplate/ebc/collection/listBySearchKey": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+
+      "uuDevKitUuAppTemplate/ebc/collection/listVersions": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+
+      "uuDevKitUuAppTemplate/ebc/collection/createFile": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ebc/collection/trash": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ebc/collection/restore": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ebc/collection/setControlledData": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ebc/collectionSet/update": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ebc/collectionSet/get": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "uuDevKitUuAppTemplate/ebc/collectionSet/getOneBySearchKey": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "uuDevKitUuAppTemplate/ebc/collectionSet/load": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "uuDevKitUuAppTemplate/ebc/collectionSet/setBasicAttributes": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ebc/collectionSet/setArtifactProfileMap": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities"]
+      },
+      "uuDevKitUuAppTemplate/ebc/collectionSet/setControlledData": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ebc/collectionSet/setSearchKey": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ebc/collectionSet/createCollection": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ebc/collectionSet/list": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "uuDevKitUuAppTemplate/ebc/collectionSet/listBySearchKey": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+
+      "uuDevKitUuAppTemplate/ebc/collectionSet/listVersions": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+
+      "uuDevKitUuAppTemplate/ebc/file/update": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ebc/file/updateData": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+
+      "uuDevKitUuAppTemplate/ebc/file/copyVersionAsCurrent": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+
+      "uuDevKitUuAppTemplate/ebc/file/get": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "uuDevKitUuAppTemplate/ebc/file/getOneBySearchKey": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+
+      "uuDevKitUuAppTemplate/ebc/file/getVersion": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+
+      "uuDevKitUuAppTemplate/ebc/file/getData": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "uuDevKitUuAppTemplate/ebc/file/getDataUri": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+
+      "uuDevKitUuAppTemplate/ebc/file/getVersionThumbnailData": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+
+      "uuDevKitUuAppTemplate/ebc/file/getThumbnailData": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+
+      "uuDevKitUuAppTemplate/ebc/file/getVersionData": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "uuDevKitUuAppTemplate/ebc/file/getVersionDataUri": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+
+      "uuDevKitUuAppTemplate/ebc/file/list": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "uuDevKitUuAppTemplate/ebc/file/listBySearchKey": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+
+      "uuDevKitUuAppTemplate/ebc/file/listVersions": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+
+      "uuDevKitUuAppTemplate/ebc/file/setBasicAttributes": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ebc/file/setSearchKey": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ebc/file/setControlledData": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ebc/file/setArtifactProfileMap": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities"]
+      },
+      "uuDevKitUuAppTemplate/ebc/file/trash": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+
+      "uuDevKitUuAppTemplate/ebc/file/restore": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ebc/file/createAccessKey": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ebc/file/download": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers", "Public"]
+      },
+      "uuDevKitUuAppTemplate/ebc/file/lock": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ebc/file/unlock": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ebc/file/privilegedUnlock": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "uuDevKitUuAppTemplate/ebc/file/extendLock": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+
+      "sys/uuAppWorkspace/apiConsole/getData": {
+        "sysStateList": [
+          "active",
+          "restricted",
+          "created",
+          "assigned",
+          "beingInitialized",
+          "readOnly",
+          "closed",
+          "suspended"
+        ],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+
+      "defaultUve": {
+        "profileList": ["Public"]
+      },
+      "sys/uuAppWorkspace/initUve": {
+        "sysStateList": ["assigned", "beingInitialized"],
+        "profileList": ["Public", "AwidInitiator"]
+      },
+      "sys/uuAppWorkspace/apiConsole": {
+        "sysStateList": [
+          "created",
+          "assigned",
+          "beingInitialized",
+          "active",
+          "restricted",
+          "readOnly",
+          "closed",
+          "suspended"
+        ],
+        "profileList": ["Authenticated"]
+      },
+      "historizableObject/getUseCasePermission": {
+        "sysStateList": ["active"],
+        "profileList": ["Authorities", "Operatives", "Readers"]
+      },
+      "historizableObject/create": {
+        "sysStateList": ["active"],
+        "profileList": ["Authorities", "Writers"]
+      },
+      "historizableObject/_createFinalize": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity"]
+      },
+      "historizableObject/_createFinalizeRollback": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity"]
+      },
+      "historizableObject/get": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers", "Readers"]
+      },
+      "historizableObject/load": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers", "Readers"]
+      },
+      "historizableObject/list": {
+        "sysStateList": ["active", "restricted"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers"]
+      },
+      "historizableObject/update": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers"]
+      },
+      "historizableObject/setState": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers"]
+      },
+      "historizableObject/setStateClosed": {
+        "sysStateList": ["active", "restricted"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers"]
+      },
+      "historizableObject/delete": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers"]
+      },
+      "historizableObject/ebc/root/getTreeStructure": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "historizableObject/ebc/collection/get": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "historizableObject/ebc/collection/getOneBySearchKey": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "historizableObject/ebc/collection/load": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "historizableObject/ebc/collection/setBasicAttributes": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "historizableObject/ebc/collection/update": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "historizableObject/ebc/collection/setArtifactProfileMap": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities"]
+      },
+      "historizableObject/ebc/collection/setSearchKey": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "historizableObject/ebc/collection/list": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "historizableObject/ebc/collection/listFiles": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "historizableObject/ebc/collection/listTrashedFiles": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "historizableObject/ebc/collection/countFiles": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "historizableObject/ebc/collection/listBySearchKey": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+
+      "historizableObject/ebc/collection/listVersions": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+
+      "historizableObject/ebc/collection/createFile": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "historizableObject/ebc/collection/trash": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "historizableObject/ebc/collection/restore": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "historizableObject/ebc/collection/setControlledData": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "historizableObject/ebc/collectionSet/update": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "historizableObject/ebc/collectionSet/get": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "historizableObject/ebc/collectionSet/getOneBySearchKey": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "historizableObject/ebc/collectionSet/load": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "historizableObject/ebc/collectionSet/setBasicAttributes": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "historizableObject/ebc/collectionSet/setArtifactProfileMap": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities"]
+      },
+      "historizableObject/ebc/collectionSet/setControlledData": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "historizableObject/ebc/collectionSet/setSearchKey": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "historizableObject/ebc/collectionSet/createCollection": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "historizableObject/ebc/collectionSet/list": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "historizableObject/ebc/collectionSet/listBySearchKey": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+
+      "historizableObject/ebc/collectionSet/listVersions": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+
+      "historizableObject/ebc/file/update": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "historizableObject/ebc/file/updateData": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+
+      "historizableObject/ebc/file/copyVersionAsCurrent": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+
+      "historizableObject/ebc/file/get": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "historizableObject/ebc/file/getOneBySearchKey": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+
+      "historizableObject/ebc/file/getVersion": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+
+      "historizableObject/ebc/file/getData": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "historizableObject/ebc/file/getDataUri": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+
+      "historizableObject/ebc/file/getVersionThumbnailData": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+
+      "historizableObject/ebc/file/getThumbnailData": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+
+      "historizableObject/ebc/file/getVersionData": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "historizableObject/ebc/file/getVersionDataUri": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+
+      "historizableObject/ebc/file/list": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+      "historizableObject/ebc/file/listBySearchKey": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+
+      "historizableObject/ebc/file/listVersions": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+      },
+
+      "historizableObject/ebc/file/setBasicAttributes": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "historizableObject/ebc/file/setSearchKey": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "historizableObject/ebc/file/setControlledData": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "historizableObject/ebc/file/setArtifactProfileMap": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities"]
+      },
+      "historizableObject/ebc/file/trash": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+
+      "historizableObject/ebc/file/restore": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "historizableObject/ebc/file/createAccessKey": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "historizableObject/ebc/file/download": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers", "Public"]
+      },
+      "historizableObject/ebc/file/lock": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "historizableObject/ebc/file/unlock": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "historizableObject/ebc/file/privilegedUnlock": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "historizableObject/ebc/file/extendLock": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+      },
+      "historizableObject/ecc/document/get": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers", "Readers"]
+      },
+      "historizableObject/ecc/document/load": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers", "Readers"]
+      },
+      "historizableObject/ecc/document/listBySearchKey": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers", "Readers"]
+      },
+      "historizableObject/ecc/document/listPageOrderVersions": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers", "Readers"]
+      },
+      "historizableObject/ecc/document/listTrashedPages": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers", "Readers"]
+      },
+      "historizableObject/ecc/document/getPageOrder": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers", "Readers"]
+      },
+      "historizableObject/ecc/document/listVersions": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers", "Readers"]
+      },
+      "historizableObject/ecc/document/getTreeStructure": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers", "Readers"]
+      },
+      "historizableObject/ecc/document/update": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers"]
+      },
+      "historizableObject/ecc/document/restorePage": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers"]
+      },
+      "historizableObject/ecc/document/movePage": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers"]
+      },
+      "historizableObject/ecc/document/setBasicAttributes": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers"]
+      },
+      "historizableObject/ecc/document/setDefaults": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers"]
+      },
+      "historizableObject/ecc/document/setArtifactProfileMap": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities"]
+      },
+      "historizableObject/ecc/document/trashPage": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers"]
+      },
+      "historizableObject/ecc/document/deletePage": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers"]
+      },
+      "historizableObject/ecc/document/createPage": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers"]
+      },
+      "historizableObject/ecc/document/copyPage": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers", "Readers"]
+      },
+      "historizableObject/ecc/document/importPage": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers"]
+      },
+      "historizableObject/ecc/document/updatePageOrder": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers"]
+      },
+      "historizableObject/ecc/document/setMainPage": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers"]
+      },
+      "historizableObject/ecc/page/load": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers", "Readers"]
+      },
+      "historizableObject/ecc/page/getOneBySearchKey": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers", "Readers"]
+      },
+      "historizableObject/ecc/page/listBySearchKey": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers", "Readers"]
+      },
+      "historizableObject/ecc/page/get": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers", "Readers"]
+      },
+      "historizableObject/ecc/page/listVersions": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers", "Readers"]
+      },
+      "historizableObject/ecc/page/getTreeStructure": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers", "Readers"]
+      },
+      "historizableObject/ecc/page/list": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers", "Readers"]
+      },
+      "historizableObject/ecc/page/update": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers"]
+      },
+      "historizableObject/ecc/page/setUnderConstruction": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers"]
+      },
+      "historizableObject/ecc/page/setBasicAttributes": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers"]
+      },
+      "historizableObject/ecc/page/setArtifactProfileMap": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities"]
+      },
+      "historizableObject/ecc/page/setTopSectionData": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers"]
+      },
+      "historizableObject/ecc/page/setBottomSectionData": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers"]
+      },
+      "historizableObject/ecc/page/setControlledData": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers"]
+      },
+      "historizableObject/ecc/page/setMainPanelData": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers"]
+      },
+      "historizableObject/ecc/page/setSidePanelData": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers"]
+      },
+      "historizableObject/ecc/listPages": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers", "Readers"]
+      },
+      "historizableObject/ecc/listSections": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers", "Readers"]
+      },
+      "historizableObject/ecc/panel/moveSection": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers"]
+      },
+      "historizableObject/ecc/panel/setArtifactProfileMap": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities"]
+      },
+      "historizableObject/ecc/panel/setSectionRestrictions": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers"]
+      },
+      "historizableObject/ecc/panel/setTopSectionData": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers"]
+      },
+      "historizableObject/ecc/panel/setBottomSectionData": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers"]
+      },
+      "historizableObject/ecc/panel/setBasicAttributes": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers"]
+      },
+      "historizableObject/ecc/panel/restoreSection": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers"]
+      },
+      "historizableObject/ecc/panel/deleteSection": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers"]
+      },
+      "historizableObject/ecc/panel/listBySearchKey": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers", "Readers"]
+      },
+      "historizableObject/ecc/panel/listSectionOrderVersions": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers", "Readers"]
+      },
+      "historizableObject/ecc/panel/getSectionOrder": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers", "Readers"]
+      },
+      "historizableObject/ecc/panel/listVersions": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers", "Readers"]
+      },
+      "historizableObject/ecc/panel/listTrashedSections": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers", "Readers"]
+      },
+      "historizableObject/ecc/panel/get": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers", "Readers"]
+      },
+      "historizableObject/ecc/panel/load": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers", "Readers"]
+      },
+      "historizableObject/ecc/panel/getTreeStructure": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers", "Readers"]
+      },
+      "historizableObject/ecc/panel/createSection": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers"]
+      },
+      "historizableObject/ecc/panel/trashSection": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers"]
+      },
+      "historizableObject/ecc/panel/update": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers"]
+      },
+      "historizableObject/ecc/section/setContent": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers"]
+      },
+      "historizableObject/ecc/section/setUnderConstruction": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers"]
+      },
+      "historizableObject/ecc/section/setBasicAttributes": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers"]
+      },
+      "historizableObject/ecc/section/setArtifactProfileMap": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities"]
+      },
+      "historizableObject/ecc/section/listBySearchKey": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers", "Readers"]
+      },
+      "historizableObject/ecc/section/get": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers", "Readers"]
+      },
+      "historizableObject/ecc/section/load": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers", "Readers"]
+      },
+      "historizableObject/ecc/section/getOneBySearchKey": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers", "Readers"]
+      },
+      "historizableObject/ecc/section/list": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers", "Readers"]
+      },
+      "historizableObject/ecc/section/lock": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers"]
+      },
+      "historizableObject/ecc/section/unlock": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers"]
+      },
+      "historizableObject/ecc/section/extendLock": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers"]
+      },
+      "historizableObject/ecc/section/update": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers"]
+      },
+      "historizableObject/ecc/section/listVersions": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers", "Readers"]
+      },
+      "historizableObject/ecc/section/setControlledData": {
+        "sysStateList": ["active"],
+        "profileList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Writers"]
+      }
+    }
+  }
+}

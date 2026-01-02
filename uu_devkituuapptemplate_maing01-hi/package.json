@@ -1,0 +1,82 @@
+{
+  "name": "uu_devkituuapptemplate_maing01-hi",
+  "version": "0.3.0-DEV",
+  "private": true,
+  "description": "",
+  "license": "License Commercial",
+  "namespace": "UuDevKitUuAppTemplate",
+  "spec": "uu5-app; uu_appg01_devkit@6.6.0; uu5devkitg01-plugin@1.5.1",
+  "dependencies": {
+    "uu_businessbrickg02": "~4.0.0-beta",
+    "uu_businessbrickg02-core": "~4.0.0-beta",
+    "uu_datatypesg01": "^0.1.1",
+    "uu_editablecomponentcontentg04": "~5.0.0-beta",
+    "uu_editablebinarycontentg02": "~5.0.0-beta",
+    "uu_editablebinarycontentg02-core": "~5.0.0-beta",
+    "uu_plus4u5g02": "^1.38.0",
+    "uu_plus4u5g02-app": "^1.38.0",
+    "uu_plus4u5g02-elements": "^1.38.0",
+    "uu_tg01": "^0.56.1",
+    "uu_tg01-elements": "^0.56.1",
+    "uu_tg01-forms": "^0.56.1",
+    "uu5codekitg01": "^2.4.1",
+    "uu5g04": "^1.58.9",
+    "uu5g05": "^1.38.9",
+    "uu5g05-browser-compatibility": "^1.38.9",
+    "uu5g05-elements": "^1.38.9",
+    "uu5g05-forms": "^1.38.9",
+    "uu5loaderg01": "^1.7.0",
+    "uu_artifactg01": "~0.2.0-beta",
+    "uu_artifactg01-app": "~0.2.0-beta",
+    "uu_artifactg01-core": "~0.2.0-beta",
+    "uu_activityg01": "~0.1.0-beta",
+    "uu_activityg01-core": "~0.1.0-beta",
+    "uu5componentkitg01": "~0.3.0-beta",
+    "uu5componentkitg01-core": "~0.3.0-beta",
+    "uu5appkitg01": "~0.1.0-beta",
+    "uu5appkitg01-core": "~0.1.0-beta",
+    "uu_devkituuapptemplateg01": "file:../uu_devkituuapptemplateg01-uu5lib/uu_devkituuapptemplateg01",
+    "uu_devkituuapptemplateg01-core": "file:../uu_devkituuapptemplateg01-uu5lib/uu_devkituuapptemplateg01-core"
+  },
+  "uuBuildSettings": {
+    "externals": {
+      "uu_devkituuapptemplateg01": {
+        "uri": "http://localhost:4920/uu_devkituuapptemplateg01.js"
+      },
+      "uu_devkituuapptemplateg01-core": {
+        "uri": "http://localhost:4930/uu_devkituuapptemplateg01-core.js"
+      }
+    }
+  },
+  "devDependencies": {
+    "uu_appg01_devkit": "^6.6.0",
+    "uu_cloudg02-devkit": "^0.15.3",
+    "uu5devkitg01-plugin": "^1.5.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "clean": "uu_appg01_devkit clean",
+    "test": "uu_appg01_devkit test",
+    "build": "uu_appg01_devkit build",
+    "package": "uu_appg01_devkit package",
+    "start": "uu_appg01_devkit start",
+    "prettify": "uu_appg01_devkit prettify",
+    "vulnerabilityScan": "uu_appg01_devkit vulnerabilityScan",
+    "uuAppDevKitUpgrade": "uu_appg01_devkit uuAppDevKitUpgrade",
+    "uu5Generate": "uu5devkitg01-plugin generate",
+    "uu5LsiExport": "uu5devkitg01-plugin lsiExport",
+    "uu5LsiImport": "uu5devkitg01-plugin lsiImport",
+    "uu5DocUpdateExamples": "uu5devkitg01-plugin docUpdateExamples",
+    "uuCloudg02AppBoxCopy": "uu_cloudg02-devkit appBoxCopy",
+    "uuCloudg02AppBoxExport": "uu_cloudg02-devkit appBoxExport",
+    "uuCloudg02AppBoxImport": "uu_cloudg02-devkit appBoxImport",
+    "uuCloudg02AppBox": "uu_cloudg02-devkit appBox",
+    "uuCloudg02Deploy": "uu_cloudg02-devkit deploy",
+    "uu-safe-install": "npx uu-safe-install"
+  },
+  "prettier": {
+    "printWidth": 120
+  }
+}

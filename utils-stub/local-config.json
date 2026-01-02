@@ -1,0 +1,29 @@
+{
+  "uuIdentity": "7389-360-836-0000",
+  "uuBusinessTerritoryBaseUri": "http://localhost:9090/uu-businessterritory-maing01/00000000000000000000000000000002",
+  "uuApp": {
+    "vendor": "uu",
+    "uuApp": "devKitUuAppTemplate",
+    "uuSubApp": "main",
+    "generation": "g01",
+    "host": "http://localhost:9090",
+    "innerPort": "8080"
+  },
+  "folderSuffixMap": {
+    "server": "server",
+    "uuscriptlib": "uuscriptlib",
+    "hi": "hi"
+  },
+  "hasUu5Lib": true,
+  "asid": "6098c5c9e8ad2785344a61d01babfb92",
+  "awidList": [
+    {
+      "awid": "dd1ff736deaf5a3497ac5d3f7fa8c87f",
+      "uuTerritoryBaseUri": "http://localhost:9090/uu-businessterritory-maing01/00000000000000000000000000000002",
+      "locationId": "6957ad41b38cd2870e672b21",
+      "name": "uuDevKitUuAppTemplate AWID",
+      "desc": "uuDevKitUuAppTemplate AWID description"
+    }
+  ],
+  "dockerEnvPath": "C:\\LESSONS\\uu_dockerenvg01"
+}

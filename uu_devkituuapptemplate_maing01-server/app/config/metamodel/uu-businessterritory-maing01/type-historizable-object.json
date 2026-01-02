@@ -1,0 +1,1243 @@
+{
+  "code": "uu-devkituuapptemplate-maing01/historizableObject",
+  "name": "HistorizableObject",
+  "desc": "HistorizableObject uuAppType",
+  "defaultIcon": "uubml-artifact",
+  "stateDataSchema": "shape({progress: shape({weight: integer(), current: integer (0, 100)}), name: string(), desc: string(), code: string(\"^[a-zA-Z0-9_~/&-.]{3,128}$\")}, nostrict, 10000)",
+  "stateList": [
+    {
+      "name": "<uu5string/><UU5.Bricks.Lsi><UU5.Bricks.Lsi.Item language='en'>Initial</UU5.Bricks.Lsi.Item><UU5.Bricks.Lsi.Item language='cs'>Založeno</UU5.Bricks.Lsi.Item><UU5.Bricks.Lsi.Item language='uk'>Початковий</UU5.Bricks.Lsi.Item></UU5.Bricks.Lsi>",
+      "code": "initial",
+      "ancestorStateMap": {
+        "uu-businessterritory-maing01/uuObc": "initial"
+      },
+      "icon": "uubml-state-s00-initial"
+    },
+    {
+      "name": "<uu5string/><UU5.Bricks.Lsi><UU5.Bricks.Lsi.Item language='en'>Active</UU5.Bricks.Lsi.Item><UU5.Bricks.Lsi.Item language='cs'>Aktivní</UU5.Bricks.Lsi.Item><UU5.Bricks.Lsi.Item language='uk'>Активний</UU5.Bricks.Lsi.Item></UU5.Bricks.Lsi>",
+      "code": "active",
+      "ancestorStateMap": {
+        "uu-businessterritory-maing01/uuObc": "active"
+      },
+      "icon": "uubml-state-s10-active"
+    },
+    {
+      "name": "<uu5string/><UU5.Bricks.Lsi><UU5.Bricks.Lsi.Item language='en'>Warning</UU5.Bricks.Lsi.Item><UU5.Bricks.Lsi.Item language='cs'>Upozornění</UU5.Bricks.Lsi.Item><UU5.Bricks.Lsi.Item language='uk'>Із зауваженнями</UU5.Bricks.Lsi.Item></UU5.Bricks.Lsi>",
+      "code": "warning",
+      "ancestorStateMap": {
+        "uu-businessterritory-maing01/uuObc": "warning"
+      },
+      "icon": "uubml-state-s53-alternative-active"
+    },
+    {
+      "name": "<uu5string/><UU5.Bricks.Lsi><UU5.Bricks.Lsi.Item language='en'>Problem</UU5.Bricks.Lsi.Item><UU5.Bricks.Lsi.Item language='cs'>Problém</UU5.Bricks.Lsi.Item><UU5.Bricks.Lsi.Item language='uk'>Із проблемою</UU5.Bricks.Lsi.Item></UU5.Bricks.Lsi>",
+      "code": "problem",
+      "ancestorStateMap": {
+        "uu-businessterritory-maing01/uuObc": "problem"
+      },
+      "icon": "uubml-state-s34-problem"
+    },
+    {
+      "name": "<uu5string/><UU5.Bricks.Lsi><UU5.Bricks.Lsi.Item language='en'>Being Created</UU5.Bricks.Lsi.Item><UU5.Bricks.Lsi.Item language='cs'>Vytváří se</UU5.Bricks.Lsi.Item><UU5.Bricks.Lsi.Item language='uk'>Створюється</UU5.Bricks.Lsi.Item></UU5.Bricks.Lsi>",
+      "code": "beingCreated",
+      "ancestorStateMap": {
+        "uu-businessterritory-maing01/uuObc": "system"
+      },
+      "icon": "uubml-state-s00-system"
+    },
+    {
+      "name": "<uu5string/><UU5.Bricks.Lsi><UU5.Bricks.Lsi.Item language='en'>Closing</UU5.Bricks.Lsi.Item><UU5.Bricks.Lsi.Item language='cs'>Uzavírá se</UU5.Bricks.Lsi.Item><UU5.Bricks.Lsi.Item language='uk'>Закривається</UU5.Bricks.Lsi.Item></UU5.Bricks.Lsi>",
+      "code": "prefinalClosed",
+      "ancestorStateMap": {
+        "uu-businessterritory-maing01/uuObc": "prefinal"
+      },
+      "icon": "uubml-state-s25-final"
+    },
+    {
+      "name": "<uu5string/><UU5.Bricks.Lsi><UU5.Bricks.Lsi.Item language='en'>Closed</UU5.Bricks.Lsi.Item><UU5.Bricks.Lsi.Item language='cs'>Ukončeno</UU5.Bricks.Lsi.Item><UU5.Bricks.Lsi.Item language='uk'>Закритий</UU5.Bricks.Lsi.Item></UU5.Bricks.Lsi>",
+      "code": "closed",
+      "ancestorStateMap": {
+        "uu-businessterritory-maing01/uuObc": "final"
+      },
+      "icon": "uubml-state-s25-final"
+    },
+    {
+      "name": "<uu5string/><UU5.Bricks.Lsi><UU5.Bricks.Lsi.Item language='en'>Cancelled</UU5.Bricks.Lsi.Item><UU5.Bricks.Lsi.Item language='cs'>UZAVŘENÝ</UU5.Bricks.Lsi.Item><UU5.Bricks.Lsi.Item language='uk'>Скасований</UU5.Bricks.Lsi.Item></UU5.Bricks.Lsi>",
+      "code": "cancelled",
+      "ancestorStateMap": {
+        "uu-businessterritory-maing01/uuObc": "cancelled"
+      },
+      "icon": "uubml-state-s27-cancelled"
+    }
+  ],
+  "roleProfileList": [
+    {
+      "code": "SystemIdentity",
+      "name": "<uu5string/><UU5.Bricks.Lsi><UU5.Bricks.Lsi.Item language='en'>System identity</UU5.Bricks.Lsi.Item><UU5.Bricks.Lsi.Item language='cs'>Systémová identita</UU5.Bricks.Lsi.Item></UU5.Bricks.Lsi>",
+      "desc": "<uu5string/><UU5.Bricks.Lsi><UU5.Bricks.Lsi.Item language='en'>Profile of artifact's application system identity</UU5.Bricks.Lsi.Item><UU5.Bricks.Lsi.Item language='cs'>Profil aplikační systémové identity role artefaktu</UU5.Bricks.Lsi.Item></UU5.Bricks.Lsi>"
+    },
+    {
+      "code": "ResponsibleRole",
+      "name": "<uu5string/><UU5.Bricks.Lsi><UU5.Bricks.Lsi.Item language='en'>Responsible role</UU5.Bricks.Lsi.Item><UU5.Bricks.Lsi.Item language='cs'>Kompetentní role</UU5.Bricks.Lsi.Item></UU5.Bricks.Lsi>",
+      "desc": "<uu5string/><UU5.Bricks.Lsi><UU5.Bricks.Lsi.Item language='en'>Profile of artifact's responsible role</UU5.Bricks.Lsi.Item><UU5.Bricks.Lsi.Item language='cs'>Profil kompetentní role za artefakt</UU5.Bricks.Lsi.Item></UU5.Bricks.Lsi>"
+    }
+  ],
+  "roleGroupProfileList": [
+    {
+      "code": "Authorities",
+      "name": "Authorities",
+      "desc": "Authorities"
+    },
+    {
+      "code": "Writers",
+      "name": "Writers",
+      "desc": "Writers"
+    },
+    {
+      "code": "Readers",
+      "name": "Readers",
+      "desc": "Readers"
+    }
+  ],
+  "defaultPermissionMatrix": [
+    "11000000-00000000-00000000-00001000",
+    "00100000-00000000-00000000-00000000",
+    "00000000-00000000-00000000-00000010"
+  ],
+  "ancestorPathList": ["uu-businessterritory-maing01/uuObc"],
+  "ancestorMap": {
+    "uu-businessterritory-maing01/uuObc": {
+      "interfaceUuCmdMap": {}
+    }
+  },
+  "synchronizeUuCmdMap": {
+    "uu-businessterritory-maing01/uuObc/synchronizeArtifactAttributes": "uu-devkituuapptemplate-maing01/historizableObject/load"
+  },
+  "lsiObjectAttributeList": ["name", "desc"],
+  "useCaseProfileMap": {
+    "uu-devkituuapptemplate-maing01/historizableObject/create": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/list": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11110000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/createFinalize": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["10000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/createFinalizeRollback": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["10000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/get": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/load": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/setState": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/setStateClosed": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/update": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/delete": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/copy": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/moveToTrash": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/discard": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/restore": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/setLocation": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/listVersions": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/aar/create": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/aar/update": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/aar/delete": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/setResponsibleRole": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/getUseCasePermission": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/document/get": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/document/load": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/document/update": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/document/copyPage": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/document/importPage": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/document/createPage": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/document/movePage": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/document/updatePageOrder": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/document/trashPage": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/document/deletePage": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/document/setMainPage": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/document/listTrashedPages": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11110000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/document/restorePage": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/page/load": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/page/get": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/page/list": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/page/update": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/panel/load": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/panel/update": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/panel/moveSection": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/panel/createSection": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/panel/trashSection": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/panel/deleteSection": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/panel/restoreSection": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/panel/listTrashedSections": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11110000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/section/lock": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/section/unlock": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/section/extendLock": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/section/update": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/section/listVersions": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/section/get": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/collection/get": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/collection/load": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/collection/list": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/collectionSet/list": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/collection/listVersions": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/collection/listFiles": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/collection/countFiles": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/collection/createFile": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/collection/listTrashedFiles": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/file/update": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/file/delete": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/file/copyVersionAsCurrent": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/file/setBasicAttributes": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/file/createAccessKey": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/collectionSet/createCollection": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/file/download": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/file/trash": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/file/updateData": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/file/get": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/file/getOneBySearchKey": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/file/getData": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/file/getVersion": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/file/getVersionData": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/file/getDataUri": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/file/listVersions": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/diagram/delete": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/diagram/list": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/diagram/load": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/diagram/lock": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/diagram/unlock": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/diagram/update": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/image/deleteVersion": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/image/get": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/image/getData": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/image/listVersions": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/esc/collection/createShape": {
+      "roleGroupProfileMaskList": ["10010000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "01000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/esc/collection/get": {
+      "roleGroupProfileMaskList": ["10010000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "01000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/esc/collection/load": {
+      "roleGroupProfileMaskList": ["10010000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "01000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/esc/collection/update": {
+      "roleGroupProfileMaskList": ["10010000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "01000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/esc/collection/setBasicAttributes": {
+      "roleGroupProfileMaskList": ["10010000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "01000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/esc/collection/setSearchKey": {
+      "roleGroupProfileMaskList": ["10010000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "01000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/esc/collection/list": {
+      "roleGroupProfileMaskList": ["10010000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "01000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/esc/collection/listBySearchKey": {
+      "roleGroupProfileMaskList": ["10010000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "01000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/esc/collection/listVersions": {
+      "roleGroupProfileMaskList": ["10010000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "01000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/esc/collection/listShapes": {
+      "roleGroupProfileMaskList": ["10010000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "01000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/esc/collection/setArtifactProfileMap": {
+      "roleGroupProfileMaskList": ["10010000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "01000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/esc/collectionSet/get": {
+      "roleGroupProfileMaskList": ["10010000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "01000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/esc/collectionSet/load": {
+      "roleGroupProfileMaskList": ["10010000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "01000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/esc/collectionSet/update": {
+      "roleGroupProfileMaskList": ["10010000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "01000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/esc/collectionSet/setBasicAttributes": {
+      "roleGroupProfileMaskList": ["10010000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "01000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/esc/collectionSet/setSearchKey": {
+      "roleGroupProfileMaskList": ["10010000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "01000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/esc/collectionSet/createCollection": {
+      "roleGroupProfileMaskList": ["10010000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "01000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/esc/collectionSet/list": {
+      "roleGroupProfileMaskList": ["10010000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "01000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/esc/collectionSet/listVersions": {
+      "roleGroupProfileMaskList": ["10010000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "01000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/esc/collectionSet/listBySearchKey": {
+      "roleGroupProfileMaskList": ["10010000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "01000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/esc/collectionSet/setArtifactProfileMap": {
+      "roleGroupProfileMaskList": ["10010000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "01000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/esc/collection/trash": {
+      "roleGroupProfileMaskList": ["10010000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "01000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/esc/collection/restore": {
+      "roleGroupProfileMaskList": ["10010000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "01000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/esc/shape/delete": {
+      "roleGroupProfileMaskList": ["10010000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "01000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/esc/shape/get": {
+      "roleGroupProfileMaskList": ["10010000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "01000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/esc/shape/load": {
+      "roleGroupProfileMaskList": ["10010000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "01000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/esc/shape/list": {
+      "roleGroupProfileMaskList": ["10010000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "01000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/esc/shape/listBySearchKey": {
+      "roleGroupProfileMaskList": ["10010000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "01000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/esc/shape/listVersions": {
+      "roleGroupProfileMaskList": ["10010000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "01000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/esc/shape/update": {
+      "roleGroupProfileMaskList": ["10010000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "01000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/esc/shape/setControlledData": {
+      "roleGroupProfileMaskList": ["10010000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "01000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/esc/shape/setData": {
+      "roleGroupProfileMaskList": ["10010000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "01000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/esc/shape/setBasicAttributes": {
+      "roleGroupProfileMaskList": ["10010000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "01000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/esc/shape/setSearchKey": {
+      "roleGroupProfileMaskList": ["10010000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "01000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/esc/shape/setArtifactProfileMap": {
+      "roleGroupProfileMaskList": ["10010000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "01000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/esc/shape/trash": {
+      "roleGroupProfileMaskList": ["10010000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "01000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/esc/shape/restore": {
+      "roleGroupProfileMaskList": ["10010000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "01000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/document/setBasicAttributes": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/document/setDefaults": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/document/setArtifactProfileMap": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/document/listPageOrderHistory": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/document/getPageOrder": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/document/listVersions": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/document/getTreeStructure": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/document/listBySearchKey": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/page/listVersions": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/page/getTreeStructure": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/page/listBySearchKey": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/page/setSidePanelData": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/page/setMainPanelData": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/page/setBottomSectionData": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/page/setTopSectionData": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/page/setControlledData": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/page/setArtifactProfileMap": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/panel/listBySearchKey": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/panel/listVersions": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/panel/getSectionOrder": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/panel/listSectionOrderHistory": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/panel/getTreeStructure": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/panel/get": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/panel/setArtifactProfileMap": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/panel/setSectionRestrictions": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/panel/setTopSectionData": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/panel/setBottomSectionData": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/section/setArtifactProfileMap": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/section/setBasicAttributes": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/section/setContent": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/section/setUnderConstruction": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/section/setControlledData": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/listPages": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/listSections": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/section/load": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/section/list": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ecc/section/listBySearchKey": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/root/getTreeStructure": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/collection/update": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/collection/setBasicAttributes": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/collection/setArtifactProfileMap": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/collection/setSearchKey": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/collection/listBySearchKey": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/collection/trash": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/collection/restore": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/collection/setControlledData": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/collectionSet/get": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/collectionSet/load": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/collectionSet/update": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/collectionSet/setBasicAttributes": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/collectionSet/setArtifactProfileMap": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/collectionSet/setSearchKey": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/collectionSet/listBySearchKey": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/collectionSet/listVersions": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/file/list": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/file/listBySearchKey": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/file/getThumbnailData": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/file/setControlledData": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/file/setSearchKey": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/file/setArtifactProfileMap": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/file/restore": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/file/lock": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/file/unlock": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/historizableObject/ebc/file/extendLock": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/listExplicitPermissions": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/setState": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/setBasicAttributes": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/setExplicitPermissions": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/delete": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/get": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/load": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/loadData": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/authorizeMe": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/authorizeMeForBlackOrWhiteList": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/authorizeUuIdentity": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/setResponsibleRole": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/setHomeFolder": {
+      "roleGroupProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/setUnit": {
+      "roleGroupProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/getImplicitPermissions": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/setImplicitPermissions": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/setVersion": {
+      "roleGroupProfileMaskList": ["11000000-00000000-00000000-00000000", "00000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/connectOb": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/loadEnvironment": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/loadPermissions": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/getNavigation": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/find": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/setPermissions": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["10000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/listStateHistory": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/listMyRoles": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/loadLifeCycle": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/listActivities": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/activity/create": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/activity/restart": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/activity/load": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/activity/setBasicAttributes": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/activity/setTypeSpecificData": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/activity/setSubmitter": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/activity/addSolver": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/activity/removeSolver": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/activity/reactivateSolver": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/activity/elementary/setSolver": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuArtifactIfc/activity/elementary/setSolver": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/activity/addNote": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/activity/elementary/addNote": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/activity/setNoteImportance": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/activity/removeNote": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/activity/propagateReadToDw": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/aar/create": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/aar/get": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/aar/update": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/aar/delete": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/aar/listByArtifactA": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/aar/listByArtifactB": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/contextProperty/create": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/contextProperty/setBasicAttributes": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/contextProperty/get": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/contextProperty/listByArtifact": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/contextProperty/load": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/contextProperty/delete": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/contextProperty/setValue": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/synchronizeArtifactAttributes": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/synchronizeHomeUnit": {
+      "roleGroupProfileMaskList": ["11000000-00000000-00000000-00000000", "00000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/synchronizeHomeFolder": {
+      "roleGroupProfileMaskList": ["11000000-00000000-00000000-00000000", "00000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/synchronizeResponsibleRole": {
+      "roleGroupProfileMaskList": ["11000000-00000000-00000000-00000000", "00000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/loadNavigation": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/loadWithStateHistoryData": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/authorizeRoleGroupIfc": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/authorizeRoleIfcList": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/checkIntegrityRules": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/checkConsistency": {
+      "roleGroupProfileMaskList": ["11010000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/activity/createNote": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/activity/setState": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/activity/elementary/createNote": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/activity/elementary/setState": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/setTagList": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/activity/setTagList": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/loadAvailableTagSets": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/contextNavigation/load": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/activity/updateNote": {
+      "roleGroupProfileMaskList": ["11110000-00000000-00000000-00000000", "11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000", "11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/authorizeMeForAllowOrDenyList": {
+      "roleGroupProfileMaskList": ["11000000-00000000-00000000-00000000", "00000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["10000000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/setRoleProfile": {
+      "roleGroupProfileMaskList": ["11000000-00000000-00000000-00000000", "00000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["10000000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/unsetRoleProfile": {
+      "roleGroupProfileMaskList": ["11000000-00000000-00000000-00000000", "00000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["10000000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/setSuccessor": {
+      "roleGroupProfileMaskList": ["11000000-00000000-00000000-00000000", "00000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["10000000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/unsetSuccessor": {
+      "roleGroupProfileMaskList": ["11000000-00000000-00000000-00000000", "00000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["10000000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/reconnectOb": {
+      "roleGroupProfileMaskList": ["11000000-00000000-00000000-00000000", "00000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["10000000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/moveToTrash": {
+      "roleGroupProfileMaskList": ["11000000-00000000-00000000-00000000", "00000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["10000000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/restoreFromTrash": {
+      "roleGroupProfileMaskList": ["11000000-00000000-00000000-00000000", "00000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["10000000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/visualIdentification/get": {
+      "roleGroupProfileMaskList": ["11000000-00000000-00000000-00000000", "00000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["10000000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/visualIdentification/load": {
+      "roleGroupProfileMaskList": ["11000000-00000000-00000000-00000000", "00000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["10000000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/visualIdentification/set": {
+      "roleGroupProfileMaskList": ["11000000-00000000-00000000-00000000", "00000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["10000000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/visualIdentification/unset": {
+      "roleGroupProfileMaskList": ["11000000-00000000-00000000-00000000", "00000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["10000000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/contextNavigation/get": {
+      "roleGroupProfileMaskList": ["11000000-00000000-00000000-00000000", "00000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["10000000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/contextNavigation/set": {
+      "roleGroupProfileMaskList": ["11000000-00000000-00000000-00000000", "00000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["10000000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/contextNavigation/unset": {
+      "roleGroupProfileMaskList": ["11000000-00000000-00000000-00000000", "00000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["10000000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/activity/createPerSolver": {
+      "roleGroupProfileMaskList": ["11000000-00000000-00000000-00000000", "00000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["10000000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/activity/get": {
+      "roleGroupProfileMaskList": ["11000000-00000000-00000000-00000000", "00000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["10000000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuObc/activity/closeBySupervisor": {
+      "roleGroupProfileMaskList": ["11000000-00000000-00000000-00000000", "00000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["10000000-00000000-00000000-00000000", "10000000-00000000-00000000-00000000"]
+    }
+  }
+}

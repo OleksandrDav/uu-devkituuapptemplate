@@ -1,0 +1,1110 @@
+{
+  "schemaVersion": "2.0",
+  "code": "uu-devkituuapptemplate-maing01",
+  "name": "uuDevKitUuAppTemplate uuAppMetaModel",
+  "desc": "uuDevKitUuAppTemplate uuAppMetaModel",
+  "version": "0.2.0",
+
+  "defaultIcon": "uubml-artifact",
+  "defaultCategory": "business",
+  "controlEnabled": false,
+
+  "stateList": [
+    {
+      "code": "active",
+      "type": "ACTIVE",
+      "name": "<uu5string/><UU5.Bricks.Lsi><UU5.Bricks.Lsi.Item language='en'>Active</UU5.Bricks.Lsi.Item><UU5.Bricks.Lsi.Item language='cs'>Aktivní</UU5.Bricks.Lsi.Item></UU5.Bricks.Lsi>",
+      "icon": "uubml-state-s00-active",
+      "ancestorStateMap": {
+        "uu-businessterritory-maing01/uuAwsc": "active"
+      }
+    },
+    {
+      "code": "closed",
+      "type": "FINAL",
+      "name": "<uu5string/><UU5.Bricks.Lsi><UU5.Bricks.Lsi.Item language='en'>Closed</UU5.Bricks.Lsi.Item><UU5.Bricks.Lsi.Item language='cs'>Zavřeno</UU5.Bricks.Lsi.Item></UU5.Bricks.Lsi>",
+      "icon": "uubml-state-s00-final",
+      "ancestorStateMap": {
+        "uu-businessterritory-maing01/uuAwsc": "final"
+      }
+    }
+  ],
+
+  "roleProfileList": [
+    {
+      "code": "SystemIdentity",
+      "name": "System Identity",
+      "desc": "Profile of artifact's application system identity",
+      "controlled": true
+    },
+    {
+      "code": "ResponsibleRole",
+      "name": "Responsible Role",
+      "desc": "Profile of artifact's responsible role",
+      "controlled": true
+    }
+  ],
+
+  "roleGroupProfileList": [
+    {
+      "code": "Authorities",
+      "name": "Authorities",
+      "desc": "Profile grants permissions to all use cases of application."
+    },
+    {
+      "code": "Operatives",
+      "name": "Operatives",
+      "desc": "Profile grants permissions to update and read uuType but does not allow to change its specific settings."
+    },
+    {
+      "code": "Auditors",
+      "name": "Auditors",
+      "desc": "Profile with read permissions only."
+    }
+  ],
+
+  "defaultPermissionMatrix": [
+    "11000000-00000000-00000000-00001000",
+    "00100000-00000000-00000000-00000000",
+    "00000000-00000000-00000000-00000010"
+  ],
+
+  "ancestorPathList": ["uu-businessterritory-maing01/uuAwsc"],
+
+  "useCaseProfileMap": {
+    "uu-devkituuapptemplate-maing01/sys/connectArtifact": {
+      "roleGroupProfileMaskList": ["10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/sys/setAuthType": {
+      "roleGroupProfileMaskList": ["10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/sys/getAppWorkspace": {
+      "roleGroupProfileMaskList": ["10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/sys/setProfile": {
+      "roleGroupProfileMaskList": ["10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/sys/getProfile": {
+      "roleGroupProfileMaskList": ["10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/sys/listProfiles": {
+      "roleGroupProfileMaskList": ["10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/sys/createPermission": {
+      "roleGroupProfileMaskList": ["10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/sys/listPermissions": {
+      "roleGroupProfileMaskList": ["10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/sys/deletePermission": {
+      "roleGroupProfileMaskList": ["10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/sys/getLicenseOwner": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/sys/setAppWorkspaceConfig": {
+      "roleGroupProfileMaskList": ["10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/sys/getAppWorkspaceConfig": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/sys/clearAppWorkspaceConfig": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/sys/calculateDataStoreStats": {
+      "roleGroupProfileMaskList": ["10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/sys/getDataStoreStats": {
+      "roleGroupProfileMaskList": ["10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/sys/setAwidRuntimeMode": {
+      "roleGroupProfileMaskList": ["10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/sys/getAwidRuntimeMode": {
+      "roleGroupProfileMaskList": ["10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/sys/awidDump": {
+      "roleGroupProfileMaskList": ["10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/sys/awidRestore": {
+      "roleGroupProfileMaskList": ["10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/sys/appClientToken/initKeys": {
+      "roleGroupProfileMaskList": ["10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/sys/listAuditLogRecordsByTimeAndSpp": {
+      "roleGroupProfileMaskList": ["10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/sys/listMyAuditLogRecordsByTime": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/sys/uuAppWorkspace/_initFinalize": {
+      "roleGroupProfileMaskList": ["00000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["10000000-00000000-00000000-00000000"]
+    },
+    "uu-devkituuapptemplate-maing01/sys/uuAppWorkspace/_initFinalizeRollback": {
+      "roleGroupProfileMaskList": ["00000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["10000000-00000000-00000000-00000000"]
+    },
+
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/getUseCasePermission": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/root/load": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/document/get": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/document/load": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/document/listBySearchKey": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/document/listPageOrderVersions": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/document/listTrashedPages": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/document/getPageOrder": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/document/listVersions": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/document/getTreeStructure": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/document/update": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/document/restorePage": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/document/movePage": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/document/setBasicAttributes": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/document/setDefaults": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/document/setArtifactProfileMap": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/document/trashPage": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/document/deletePage": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/document/createPage": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/document/copyPage": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/document/importPage": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/document/updatePageOrder": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/document/setMainPage": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/panel/moveSection": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/panel/setArtifactProfileMap": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/panel/setSectionRestrictions": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/panel/setTopSectionData": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/panel/setBottomSectionData": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/panel/setBasicAttributes": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/panel/restoreSection": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/panel/deleteSection": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/panel/listBySearchKey": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/panel/listSectionOrderVersions": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/panel/getSectionOrder": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/panel/listVersions": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/panel/listTrashedSections": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/panel/get": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/panel/load": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/panel/getTreeStructure": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/panel/createSection": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/panel/trashSection": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/panel/update": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/section/setContent": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/section/setUnderConstruction": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/section/setBasicAttributes": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/section/setArtifactProfileMap": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/section/listBySearchKey": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/section/get": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/section/load": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/section/getOneBySearchKey": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/section/list": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/section/lock": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/section/unlock": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/section/extendLock": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/section/update": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/section/listVersions": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/section/setControlledData": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/page/load": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/page/getOneBySearchKey": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/page/listBySearchKey": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/page/get": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/page/listVersions": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/page/getTreeStructure": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/page/list": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/page/update": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/page/setUnderConstruction": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/page/setBasicAttributes": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/page/setArtifactProfileMap": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/page/setTopSectionData": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/page/setBottomSectionData": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/page/setControlledData": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/page/setMainPanelData": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ecc/page/setSidePanelData": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/root/getTreeStructure": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/collection/get": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/collection/getOneBySearchKey": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/collection/load": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/collection/setBasicAttributes": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/collection/update": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/collection/setArtifactProfileMap": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/collection/setSearchKey": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/collection/list": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/collection/listFiles": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/collection/listTrashedFiles": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/collection/countFiles": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/collection/listBySearchKey": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/collection/listVersions": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/collection/createFile": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/collection/trash": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/collection/restore": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/collection/setControlledData": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/collectionSet/update": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/collectionSet/get": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/collectionSet/getOneBySearchKey": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/collectionSet/load": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/collectionSet/setBasicAttributes": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/collectionSet/setArtifactProfileMap": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/collectionSet/setControlledData": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/collectionSet/setSearchKey": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/collectionSet/createCollection": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/collectionSet/list": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/collectionSet/listBySearchKey": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/collectionSet/listVersions": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/file/update": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/file/updateData": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/file/copyVersionAsCurrent": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/file/get": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/file/getOneBySearchKey": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/file/getVersion": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/file/getData": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/file/getDataUri": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/file/getVersionData": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/file/getVersionDataUri": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/file/getVersionThumbnailData": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/file/getThumbnailData": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/file/list": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/file/listBySearchKey": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/file/listVersions": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/file/setBasicAttributes": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/file/setSearchKey": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/file/setControlledData": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/file/setArtifactProfileMap": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/file/trash": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/file/restore": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/file/createAccessKey": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/file/download": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives", "Readers"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/file/lock": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/file/unlock": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/file/privilegedUnlock": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+    "uu-devkituuapptemplate-maing01/uuDevKitUuAppTemplate/ebc/file/extendLock": {
+      "appProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"],
+      "appTypeProfileCodeList": ["SystemIdentity", "ResponsibleRole", "Authorities", "Operatives"]
+    },
+
+    "uu-businessterritory-maing01/uuAwsc/authorizeMe": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/authorizeUuIdentity": {
+      "roleGroupProfileMaskList": ["11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/authorizeRoleGroupIfc": {
+      "roleGroupProfileMaskList": ["11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/authorizeRoleIfcList": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/authorizeMeForBlackOrWhiteList": {
+      "roleGroupProfileMaskList": ["11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/get": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/load": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/loadData": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/loadWithStateHistoryData": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/loadEnvironment": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/loadPermissions": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/getNavigation": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/getImplicitPermissions": {
+      "roleGroupProfileMaskList": ["10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/find": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/setBasicAttributes": {
+      "roleGroupProfileMaskList": ["10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/setVersion": {
+      "roleGroupProfileMaskList": ["10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/setResponsibleRole": {
+      "roleGroupProfileMaskList": ["10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/setHomeFolder": {
+      "roleGroupProfileMaskList": ["10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/setUnit": {
+      "roleGroupProfileMaskList": ["10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/setState": {
+      "roleGroupProfileMaskList": ["10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/setPermissions": {
+      "roleGroupProfileMaskList": ["10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/setImplicitPermissions": {
+      "roleGroupProfileMaskList": ["10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/setExplicitPermissions": {
+      "roleGroupProfileMaskList": ["11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/setRoleProfile": {
+      "roleGroupProfileMaskList": ["11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/unsetRoleProfile": {
+      "roleGroupProfileMaskList": ["11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/connectAppWorkspace": {
+      "roleGroupProfileMaskList": ["10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-0000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/moveToTrash": {
+      "roleGroupProfileMaskList": ["10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/restoreFromTrash": {
+      "roleGroupProfileMaskList": ["10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/delete": {
+      "roleGroupProfileMaskList": ["10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/listStateHistory": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/listExplicitPermissions": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/listMyRoles": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/checkIntegrityRules": {
+      "roleGroupProfileMaskList": ["11000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/loadAvailableTagSets": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["10000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/setTagList": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/tagSet/create": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/tagSet/setBasicAttributes": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/tagSet/setTagMap": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/tagSet/delete": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/tagSet/get": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/tagSet/list": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/tagSet/addTag": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/tagSet/updateTag": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/tagSet/deleteTag": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/setControl": {
+      "roleGroupProfileMaskList": ["10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/unsetControl": {
+      "roleGroupProfileMaskList": ["10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/checkDwr": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+
+    "uu-businessterritory-maing01/uuAwsc/loadLifeCycle": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/listActivities": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/activity/propagateReadToDw": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/activity/create": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/activity/get": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/activity/load": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/activity/setBasicAttributes": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/activity/setState": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/activity/restart": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/activity/setTypeSpecificData": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/activity/setSubmitter": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/activity/addSolver": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/activity/removeSolver": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/activity/reactivateSolver": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/activity/elementary/setSolver": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/activity/addNote": {
+      "roleGroupProfileMaskList": ["01100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/activity/createNote": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/activity/elementary/addNote": {
+      "roleGroupProfileMaskList": ["01100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/activity/elementary/createNote": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/activity/elementary/setState": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/activity/setNoteImportance": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/activity/removeNote": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/activity/createPerSolver": {
+      "roleGroupProfileMaskList": ["01100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/activity/setTagList": {
+      "roleGroupProfileMaskList": ["01100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+
+    "uu-businessterritory-maing01/uuAwsc/aar/create": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/aar/get": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/aar/update": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/aar/delete": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/aar/listByArtifactA": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/aar/listByArtifactB": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/aar/createMirror": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/aar/updateMirror": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/aar/deleteMirror": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+
+    "uu-businessterritory-maing01/uuAwsc/contextProperty/create": {
+      "roleGroupProfileMaskList": ["10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/contextProperty/setBasicAttributes": {
+      "roleGroupProfileMaskList": ["10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/contextProperty/get": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/contextProperty/listByArtifact": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/contextProperty/load": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/contextProperty/delete": {
+      "roleGroupProfileMaskList": ["10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/contextProperty/setValue": {
+      "roleGroupProfileMaskList": ["10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+
+    "uu-businessterritory-maing01/uuAwsc/visualIdentification/set": {
+      "roleGroupProfileMaskList": ["10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/visualIdentification/get": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/visualIdentification/load": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/visualIdentification/unset": {
+      "roleGroupProfileMaskList": ["10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+
+    "uu-businessterritory-maing01/uuAwsc/contextNavigation/set": {
+      "roleGroupProfileMaskList": ["10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/contextNavigation/get": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/contextNavigation/load": {
+      "roleGroupProfileMaskList": ["11100000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    },
+    "uu-businessterritory-maing01/uuAwsc/contextNavigation/unset": {
+      "roleGroupProfileMaskList": ["10000000-00000000-00000000-00000000"],
+      "roleProfileMaskList": ["11000000-00000000-00000000-00000000"]
+    }
+  }
+}
