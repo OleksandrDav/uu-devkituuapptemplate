@@ -6,6 +6,10 @@
       "schemaMap": {
         "historizableObject": {
           "realization": "dao/HistorizableObjectMongo"
+        },
+        "rocket": {
+          "realization": "dao/RocketMongo",
+          "maxNoi": 1024
         }
       }
     }

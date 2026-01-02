@@ -1465,6 +1465,26 @@
         "realization": "uu_businessbrickg02_ecc:api/controllers/UuBusinessBrickEccSectionController.list",
         "httpMethod": "GET",
         "type": "CMD"
+      },
+      "helloWorld": {
+        "realization": "api/controllers/GreetingController.helloWorld",
+        "httpMethod": ["GET"],
+        "type": "CMD"
+      },
+      "rocket/create": {
+        "realization": "api/controllers/RocketController.create",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "rocket/list": {
+        "realization": "api/controllers/RocketController.list",
+        "httpMethod": "GET",
+        "type": "CMD"
+      },
+      "rocket/delete": {
+        "realization": "api/controllers/RocketController.delete",
+        "httpMethod": "POST",
+        "type": "CMD"
       }
     }
   }
