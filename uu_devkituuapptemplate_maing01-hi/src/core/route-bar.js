@@ -32,7 +32,18 @@ const RouteBar = createVisualComponent({
 
   render(props) {
     //@@viewOn:private
+    // 1. Get the control function from the hook
     const [, setRoute] = useRoute();
+
+    // 2. CREATE THE BRIDGE
+    // We expose this internal function to the global window object.
+    // This allows our Node.js Server (Middleware) to "remote control" the app.
+    if (typeof window !== "undefined") {
+      window.__SSR_SET_ROUTE__ = (routeName) => {
+        // console.log("[App] SSR Bridge: Switching route to", routeName);
+        setRoute(routeName);
+      };
+    }
 
     const actionList = [
       {
@@ -40,9 +51,8 @@ const RouteBar = createVisualComponent({
         onClick: () => setRoute("home"),
       },
       {
-        children: <Lsi import={importLsi} path={["Menu", "about"]} />,
-        onClick: () => setRoute("about"),
-        collapsed: true,
+        children: <Lsi import={importLsi} path={["Menu", "contact"]} />,
+        onClick: () => setRoute("contact"),
       },
     ];
     //@@viewOff:private

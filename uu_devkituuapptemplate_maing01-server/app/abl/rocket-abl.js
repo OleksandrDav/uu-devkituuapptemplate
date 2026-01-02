@@ -63,6 +63,9 @@ class RocketAbl {
       Errors.List.InvalidDtoIn,
     );
 
+    console.log("[SSR] Testing list");
+    
+
     if (!dtoIn.pageInfo) dtoIn.pageInfo = {};
     dtoIn.pageInfo.pageSize ??= 100;
     dtoIn.pageInfo.pageIndex ??= 0;

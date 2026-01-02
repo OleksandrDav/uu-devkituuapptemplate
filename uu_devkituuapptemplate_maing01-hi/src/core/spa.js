@@ -9,7 +9,7 @@ import UuBusinessBrick from "uu_businessbrickg02";
 
 import Config from "./config/config.js";
 import Home from "../routes/home.js";
-import HistorizableObject from "../routes/historizable-object.js";
+import Contact from "../routes/contact.js";
 
 const InitAppWorkspace = Utils.Component.lazy(() => import("../routes/init-app-workspace.js"));
 const ControlPanel = Utils.Component.lazy(() => import("../routes/control-panel.js"));
@@ -19,8 +19,8 @@ const ControlPanel = Utils.Component.lazy(() => import("../routes/control-panel.
 const ROUTE_MAP = {
   "": { redirect: "home" },
   home: (props) => <Home {...props} />,
+  contact: (props) => <Contact {...props} />,
   "sys/uuAppWorkspace/initUve": (props) => <InitAppWorkspace {...props} />,
-  historizableObjectDetail: (props) => <HistorizableObject {...props} />,
 
   controlPanel: (props) => <ControlPanel {...props} />,
   "*": () => (
