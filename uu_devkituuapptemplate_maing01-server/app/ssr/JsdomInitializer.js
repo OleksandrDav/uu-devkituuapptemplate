@@ -57,6 +57,8 @@ class JsdomInitializer {
        * Configures error listeners before the DOM is parsed or scripts are executed.
        */
       beforeParse(window) {
+        window.__EMOTION_DISABLE_SPEEDY__ = true;
+
         window.addEventListener("unhandledrejection", (event) => {
           event.preventDefault();
           console.warn(`[JSDOM Background Error] Unhandled Rejection: ${event.reason}`);
@@ -215,7 +217,7 @@ class JsdomInitializer {
     // 3. MOCK SESSION (To stop OIDC loops)
     dom.window.uuAppSession = {
       isAuthenticated: () => true,
-      getIdentity: () => ({ uuIdentity: "0-0", name: "SSR System" }),
+      getIdentity: () => ({ uuIdentity: "7389-360-836-0000", name: "SSR System" }),
     };
 
     // =========================================================================

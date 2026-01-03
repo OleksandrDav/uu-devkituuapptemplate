@@ -43,8 +43,10 @@ class SsrMiddleware {
       req.url.includes("/sys/") ||
       req.url.includes("/api/") ||
       req.url.includes("/rocket/") ||
-      req.url.includes("getClientId") || 
-      req.url.includes("grantToken") 
+      req.url.includes("getClientId") ||
+      req.url.includes("grantToken") ||
+      req.url.includes("initUve") ||
+      req.url.includes("loadData")
     ) {
       console.log(`[SSR Debug] Bypassing System/Auth Request: ${req.url}`);
       return next();
@@ -120,6 +122,16 @@ class SsrMiddleware {
       const dom = await ssrPool.acquire();
       const window = dom.window;
 
+      // --- IDENTITY SYNC ---
+      // Dynamically set the identity to match the person requesting the page
+      // Use your specific identity discovered in the logs
+      const visitorId = req.headers["x-uu-identity"] || "7389-360-836-0000";
+
+      window.uuAppSession = {
+        isAuthenticated: () => visitorId !== "0-0",
+        getIdentity: () => ({ uuIdentity: visitorId, name: "SSR Visitor" }),
+      };
+
       // -----------------------------------------------------------------------
       // STEP 6: STATE INJECTION
       // -----------------------------------------------------------------------
@@ -144,9 +156,34 @@ class SsrMiddleware {
       }
 
       // -----------------------------------------------------------------------
-      // STEP 8: SERIALIZATION
+      // STEP 8: SERIALIZATION & STABILITY
       // -----------------------------------------------------------------------
       await this._waitForStability(window);
+
+      // --- CSS LIFTING ---
+      // Manually copy rules from the virtual sheet to the tag's innerHTML
+      const styleTags = window.document.querySelectorAll("style[data-emotion]");
+      styleTags.forEach((tag) => {
+        if (tag.innerHTML.trim() === "" && tag.sheet) {
+          try {
+            let rules = "";
+            const cssRules = tag.sheet.cssRules;
+            for (let i = 0; i < cssRules.length; i++) {
+              rules += cssRules[i].cssText + "\n";
+            }
+            if (rules) {
+              tag.textContent = rules;
+            }
+          } catch (e) {
+            // Log if extraction fails for a specific tag
+            console.warn(`[SSR] Style lift failed for ${tag.getAttribute("data-emotion")}:`, e.message);
+          }
+        }
+      });
+
+      // Manually hide the loader before serializing
+      const loadingEl = window.document.getElementById("uuAppLoading");
+      if (loadingEl) loadingEl.style.display = "none";
 
       const html = dom.serialize();
 
