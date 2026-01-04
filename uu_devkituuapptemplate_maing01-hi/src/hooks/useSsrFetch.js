@@ -50,6 +50,15 @@ export function useSsrFetch(key, url) {
   // Persistence ref to track synchronization status across render cycles.
   const hasResolved = useRef(!!initialData);
 
+  // --- JSDOM STATE SYNCHRONIZATION ---
+  // If we are in JSDOM (server-side) and initialData has appeared/changed, 
+  // force the state to update before serialization.
+  if (typeof window !== "undefined" && window.__IS_JSDOM__ && initialData && data !== initialData) {
+    setData(initialData);
+    setStatus("ready");
+    hasResolved.current = true;
+  }
+
   // ===========================================================================
   // 3. EFFECT LIFECYCLE (Client-Side Synchronization)
   // ===========================================================================

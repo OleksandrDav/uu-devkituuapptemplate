@@ -7,9 +7,7 @@ const Css = {
     Config.Css.css({
       fontSize: 42,
       fontWeight: "800",
-      background: "-webkit-linear-gradient(45deg, #FF512F, #DD2476)",
-      WebkitBackgroundClip: "text",
-      WebkitTextFillColor: "transparent",
+      color: "#333",
       marginBottom: 16,
     }),
   subtitle: () => Config.Css.css({ fontSize: 18, color: "#666", maxWidth: 600, margin: "0 auto" }),

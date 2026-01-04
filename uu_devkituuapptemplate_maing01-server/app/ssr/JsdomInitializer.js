@@ -57,6 +57,7 @@ class JsdomInitializer {
        * Configures error listeners before the DOM is parsed or scripts are executed.
        */
       beforeParse(window) {
+        window.__IS_JSDOM__ = true;
         window.__EMOTION_DISABLE_SPEEDY__ = true;
 
         window.addEventListener("unhandledrejection", (event) => {

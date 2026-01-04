@@ -151,8 +151,9 @@ class SsrMiddleware {
       const routeName = this._extractRouteName(requestPath);
 
       if (window.__SSR_SET_ROUTE__) {
-        await new Promise((r) => setTimeout(r, 0));
         window.__SSR_SET_ROUTE__(routeName);
+        // Give React a "micro-task" tick to process the state update in JSDOM
+        await new Promise((resolve) => setImmediate(resolve));
       }
 
       // -----------------------------------------------------------------------
