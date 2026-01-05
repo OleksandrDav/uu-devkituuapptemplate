@@ -177,26 +177,9 @@ class SsrMiddleware {
       // Wait for the framework to finish rendering before capturing the HTML string.
       await this._waitForStability(window);
 
-      // --- CSS LIFTING ---
-      // Manually copy rules from the virtual sheet to the tag's innerHTML
-      const styleTags = window.document.querySelectorAll("style[data-emotion]");
-      styleTags.forEach((tag) => {
-        if (tag.innerHTML.trim() === "" && tag.sheet) {
-          try {
-            let rules = "";
-            const cssRules = tag.sheet.cssRules;
-            for (let i = 0; i < cssRules.length; i++) {
-              rules += cssRules[i].cssText + "\n";
-            }
-            if (rules) {
-              tag.textContent = rules;
-            }
-          } catch (e) {
-            // Log if extraction fails for a specific tag
-            console.warn(`[SSR] Style lift failed for ${tag.getAttribute("data-emotion")}:`, e.message);
-          }
-        }
-      });
+      // ⚠️ CRITICAL: Re-lift CSS before EVERY serialization
+      // This ensures any dynamic styles generated during route changes are captured
+      this._liftEmotionStyles(window);
 
       // Manually hide the loader before serializing
       const loadingEl = window.document.getElementById("uuAppLoading");
@@ -215,6 +198,35 @@ class SsrMiddleware {
       console.error(`[SSR] 💥 Pipeline failed:`, error);
       // Fallback to client-side rendering on pipeline failure.
       return next();
+    }
+  }
+
+  /**
+   * Lifts Emotion CSS from CSSOM to DOM so it survives serialization.
+   * @param {Window} window - The JSDOM window object
+   */
+  _liftEmotionStyles(window) {
+    try {
+      const styleTags = window.document.querySelectorAll("style[data-emotion]");
+
+      styleTags.forEach((tag) => {
+        if (tag.innerHTML.trim() === "" && tag.sheet && tag.sheet.cssRules) {
+          try {
+            let rules = "";
+            const cssRules = tag.sheet.cssRules;
+            for (let i = 0; i < cssRules.length; i++) {
+              rules += cssRules[i].cssText + "\n";
+            }
+            if (rules) {
+              tag.textContent = rules;
+            }
+          } catch (e) {
+            console.warn(`[SSR] Style lift failed for ${tag.getAttribute("data-emotion")}:`, e.message);
+          }
+        }
+      });
+    } catch (e) {
+      console.error("[SSR] CSS lifting error:", e);
     }
   }
 

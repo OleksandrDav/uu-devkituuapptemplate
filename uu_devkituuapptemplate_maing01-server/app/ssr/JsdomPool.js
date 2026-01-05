@@ -7,7 +7,8 @@ const { AsyncBlockingQueue } = require("./AsyncBlockingQueue.js");
  * JsdomPool
  * ---------
  * Manages a group of pre-loaded JSDOM instances to speed up SSR.
- * * Performance Note:
+ *
+ * Performance Note:
  * Creating a new JSDOM instance takes ~2000ms. By keeping a pool of already
  * started instances, we can provide a browser environment in ~0ms.
  */
@@ -35,11 +36,15 @@ class JsdomPool {
     this.isInitialized = true;
 
     console.log(`[JsdomPool] Starting ${this.config.minInstances} initial instances...`);
-    const promises = [];
+
+    // CRITICAL FIX: Create instances SEQUENTIALLY to avoid CSS race conditions
+    // Parallel creation can cause Emotion to generate styles inconsistently
     for (let i = 0; i < this.config.minInstances; i++) {
-      promises.push(this._createNewInstance());
+      await this._createNewInstance();
+      // Small delay between instances to ensure clean CSS state
+      await new Promise((resolve) => setTimeout(resolve, 100));
     }
-    await Promise.all(promises);
+
     console.log(`[JsdomPool] Pool is ready.`);
   }
 
@@ -57,6 +62,15 @@ class JsdomPool {
     try {
       const dom = await initializer.run();
 
+      // ⚠️ CRITICAL: Wait for the instance to complete its initial render
+      // before making it available to requests. This prevents serving
+      // half-loaded instances on the first request.
+      await this._waitForInitialStability(dom.window);
+
+      // ⚠️ CRITICAL CSS FIX: Lift Emotion styles IMMEDIATELY after initialization
+      // This ensures CSS is properly captured before the instance is used
+      this._liftEmotionStyles(dom.window);
+
       // Attach metadata to track the age and usage of the instance
       dom._poolMeta = {
         usageCount: 0,
@@ -66,10 +80,89 @@ class JsdomPool {
 
       this.pool.push(dom);
       this.queue.enqueue(dom);
+
+      console.log(`[JsdomPool] Instance ${dom._poolMeta.id} is ready and stable.`);
       return dom;
     } catch (e) {
       console.error("[JsdomPool] Failed to create JSDOM instance:", e);
     }
+  }
+
+  /**
+   * Lifts Emotion CSS from CSSOM to DOM so it survives serialization.
+   * This must be called after initial render and before each serialization.
+   *
+   * @param {Window} window - The JSDOM window object
+   */
+  _liftEmotionStyles(window) {
+    try {
+      const styleTags = window.document.querySelectorAll("style[data-emotion]");
+      let liftedCount = 0;
+
+      styleTags.forEach((tag) => {
+        // Only lift if the tag is empty but has rules in CSSOM
+        if (tag.innerHTML.trim() === "" && tag.sheet && tag.sheet.cssRules) {
+          try {
+            let rules = "";
+            const cssRules = tag.sheet.cssRules;
+            for (let i = 0; i < cssRules.length; i++) {
+              rules += cssRules[i].cssText + "\n";
+            }
+            if (rules) {
+              tag.textContent = rules;
+              liftedCount++;
+            }
+          } catch (e) {
+            console.warn(`[JsdomPool] Style lift failed for ${tag.getAttribute("data-emotion")}:`, e.message);
+          }
+        }
+      });
+
+      if (liftedCount > 0) {
+        console.log(`[JsdomPool] Lifted ${liftedCount} Emotion style tags`);
+      }
+    } catch (e) {
+      console.error("[JsdomPool] CSS lifting error:", e);
+    }
+  }
+
+  /**
+   * Waits for a newly created JSDOM instance to finish its initial render.
+   * This prevents serving half-loaded instances on the first request.
+   *
+   * @param {Window} window - The JSDOM window object
+   * @returns {Promise<void>}
+   */
+  _waitForInitialStability(window) {
+    return new Promise((resolve) => {
+      // Check if already stable (no loading indicator present)
+      if (!window.document.getElementById("uuAppLoading")) {
+        console.log("[JsdomPool] Instance already stable");
+        // Small buffer to ensure React is fully settled
+        setTimeout(resolve, 100);
+        return;
+      }
+
+      const start = Date.now();
+      const interval = setInterval(() => {
+        // Check if the loading indicator has been removed
+        if (!window.document.getElementById("uuAppLoading")) {
+          clearInterval(interval);
+          const elapsed = Date.now() - start;
+          console.log(`[JsdomPool] Instance became stable after ${elapsed}ms`);
+          // Small buffer to ensure React and Emotion are fully settled
+          setTimeout(resolve, 150);
+          return;
+        }
+
+        // Safety timeout to prevent hanging (increase if your app takes longer to boot)
+        if (Date.now() - start > 10000) {
+          clearInterval(interval);
+          console.warn("[JsdomPool] Instance stability timeout after 10s - proceeding anyway");
+          resolve();
+        }
+      }, 100);
+    });
   }
 
   /**

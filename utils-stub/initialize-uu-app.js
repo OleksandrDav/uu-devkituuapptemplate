@@ -469,13 +469,16 @@ class InitializeUuAppClient {
       open(this.awidBaseUriList[index]);
 
       // We wait for 4 seconds to let the OIDC handshake finish and tokens be stored.
-      console.log(`Waiting 4s for OIDC stabilization and browser cache warming...`);
-      await new Promise(resolve => setTimeout(resolve, 4000));
 
-      // Stage 2: The "SSR" load. Now that the URL is clean and the session is 
-      // ready in LocalStorage, SSR and Hydration will work perfectly.
-      console.log(`Refreshing AWID: ${awidData.awid} (Stage 2: SSR Stabilization)`);
-      open(this.awidBaseUriList[index]);
+      // !!! TEMPORARY NOT NEEDED
+
+      // console.log(`Waiting 4s for OIDC stabilization and browser cache warming...`);
+      // await new Promise(resolve => setTimeout(resolve, 4000));
+
+      // // Stage 2: The "SSR" load. Now that the URL is clean and the session is 
+      // // ready in LocalStorage, SSR and Hydration will work perfectly.
+      // console.log(`Refreshing AWID: ${awidData.awid} (Stage 2: SSR Stabilization)`);
+      // open(this.awidBaseUriList[index]);
 
       index++;
     }
