@@ -49,7 +49,7 @@ class InitializeUuAppClient {
     this.environmentFilePath = path.join(
       serverPath,
       "env",
-      this.isLocalEnv ? "development.json" : `${this.dtoIn["env"]}-development.json`,
+      this.isLocalEnv ? "development.json" : `${this.dtoIn["env"]}-development.json`
     );
     this.environmentConfig = require(this.environmentFilePath);
   }
@@ -183,7 +183,7 @@ class InitializeUuAppClient {
         new AppClient({
           baseUri: awidBaseUri,
           headers: { Authorization: this.bearerDevToken },
-        }),
+        })
     );
   }
 
@@ -438,7 +438,7 @@ class InitializeUuAppClient {
           console.log(`AWID: ${awidData.awid} clientSecret created and stored to config artifact`);
         } else {
           console.log(
-            `No localConfig.source present - skipping config artifact update (local config.json was written) for AWID: ${awidData.awid}.`,
+            `No localConfig.source present - skipping config artifact update (local config.json was written) for AWID: ${awidData.awid}.`
           );
         }
       } else {
@@ -463,16 +463,16 @@ class InitializeUuAppClient {
       }
 
       // Step 6: Open AWID in browser with Automated Two-Stage Launch
-      // Stage 1: The "Warm-up" load. This triggers OIDC to consume the ?code= and
+      // Stage 1: The "Warm-up" load. This triggers OIDC to consume the ?code= and 
       // allows the browser to cache/parse the heavy framework files.
       console.log(`Opening AWID: ${awidData.awid} in browser (Stage 1: Warm-up)`);
       open(this.awidBaseUriList[index]);
 
       // We wait for 4 seconds to let the OIDC handshake finish and tokens be stored.
       console.log(`Waiting 4s for OIDC stabilization and browser cache warming...`);
-      await new Promise((resolve) => setTimeout(resolve, 4000));
+      await new Promise(resolve => setTimeout(resolve, 4000));
 
-      // Stage 2: The "SSR" load. Now that the URL is clean and the session is
+      // Stage 2: The "SSR" load. Now that the URL is clean and the session is 
       // ready in LocalStorage, SSR and Hydration will work perfectly.
       console.log(`Refreshing AWID: ${awidData.awid} (Stage 2: SSR Stabilization)`);
       open(this.awidBaseUriList[index]);

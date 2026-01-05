@@ -218,7 +218,7 @@ class JsdomInitializer {
     // 3. MOCK SESSION (To stop OIDC loops)
     dom.window.uuAppSession = {
       isAuthenticated: () => true,
-      getIdentity: () => ({ uuIdentity: "7389-360-836-0000", name: "SSR System" }),
+      getIdentity: () => ({ uuIdentity: "0-0", name: "SSR System" }),
     };
 
     // =========================================================================

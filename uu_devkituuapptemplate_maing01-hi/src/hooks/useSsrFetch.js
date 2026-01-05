@@ -51,7 +51,7 @@ export function useSsrFetch(key, url) {
   const hasResolved = useRef(!!initialData);
 
   // --- JSDOM STATE SYNCHRONIZATION ---
-  // If we are in JSDOM (server-side) and initialData has appeared/changed, 
+  // If we are in JSDOM (server-side) and initialData has appeared/changed,
   // force the state to update before serialization.
   if (typeof window !== "undefined" && window.__IS_JSDOM__ && initialData && data !== initialData) {
     setData(initialData);
