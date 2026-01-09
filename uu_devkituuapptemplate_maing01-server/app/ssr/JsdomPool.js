@@ -67,9 +67,13 @@ class JsdomPool {
       // half-loaded instances on the first request.
       await this._waitForInitialStability(dom.window);
 
+      // ⚠️ CRITICAL CSS FIX: Add extra delay to ensure Emotion has fully
+      // written styles to CSSOM before lifting them
+      await new Promise((resolve) => setTimeout(resolve, 300));
+
       // ⚠️ CRITICAL CSS FIX: Lift Emotion styles IMMEDIATELY after initialization
       // This ensures CSS is properly captured before the instance is used
-      this._liftEmotionStyles(dom.window);
+      await this._liftEmotionStyles(dom.window);
 
       // Attach metadata to track the age and usage of the instance
       dom._poolMeta = {
@@ -94,36 +98,50 @@ class JsdomPool {
    *
    * @param {Window} window - The JSDOM window object
    */
-  _liftEmotionStyles(window) {
-    try {
-      const styleTags = window.document.querySelectorAll("style[data-emotion]");
-      let liftedCount = 0;
+  async _liftEmotionStyles(window) {
+    return new Promise((resolve) => {
+      // Use setImmediate to ensure we're lifting AFTER React has finished
+      // all its microtask work and Emotion has written to CSSOM
+      setImmediate(() => {
+        try {
+          const styleTags = window.document.querySelectorAll("style[data-emotion]");
+          let liftedCount = 0;
+          let totalRules = 0;
 
-      styleTags.forEach((tag) => {
-        // Only lift if the tag is empty but has rules in CSSOM
-        if (tag.innerHTML.trim() === "" && tag.sheet && tag.sheet.cssRules) {
-          try {
-            let rules = "";
-            const cssRules = tag.sheet.cssRules;
-            for (let i = 0; i < cssRules.length; i++) {
-              rules += cssRules[i].cssText + "\n";
+          styleTags.forEach((tag) => {
+            if (tag.sheet && tag.sheet.cssRules) {
+              try {
+                let rules = "";
+                const cssRules = tag.sheet.cssRules;
+                for (let i = 0; i < cssRules.length; i++) {
+                  rules += cssRules[i].cssText + "\n";
+                }
+                
+                // Only update if we found rules and the tag is empty or needs updating
+                if (rules && rules.trim() !== tag.textContent.trim()) {
+                  tag.textContent = rules;
+                  liftedCount++;
+                  totalRules += cssRules.length;
+                }
+              } catch (e) {
+                console.warn(`[JsdomPool] Style lift failed for ${tag.getAttribute("data-emotion")}:`, e.message);
+              }
             }
-            if (rules) {
-              tag.textContent = rules;
-              liftedCount++;
-            }
-          } catch (e) {
-            console.warn(`[JsdomPool] Style lift failed for ${tag.getAttribute("data-emotion")}:`, e.message);
+          });
+
+          if (liftedCount > 0) {
+            console.log(`[JsdomPool] ✓ Lifted ${liftedCount} Emotion style tags (${totalRules} rules)`);
+          } else {
+            console.warn(`[JsdomPool] ⚠️ No styles lifted - this may indicate a timing issue`);
           }
+          
+          resolve();
+        } catch (e) {
+          console.error("[JsdomPool] CSS lifting error:", e);
+          resolve(); // Don't block even if lifting fails
         }
       });
-
-      if (liftedCount > 0) {
-        console.log(`[JsdomPool] Lifted ${liftedCount} Emotion style tags`);
-      }
-    } catch (e) {
-      console.error("[JsdomPool] CSS lifting error:", e);
-    }
+    });
   }
 
   /**
