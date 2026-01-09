@@ -116,7 +116,7 @@ class JsdomPool {
                 for (let i = 0; i < cssRules.length; i++) {
                   rules += cssRules[i].cssText + "\n";
                 }
-                
+
                 // Only update if we found rules and the tag is empty or needs updating
                 if (rules && rules.trim() !== tag.textContent.trim()) {
                   tag.textContent = rules;
@@ -134,7 +134,7 @@ class JsdomPool {
           } else {
             console.warn(`[JsdomPool] ⚠️ No styles lifted - this may indicate a timing issue`);
           }
-          
+
           resolve();
         } catch (e) {
           console.error("[JsdomPool] CSS lifting error:", e);
